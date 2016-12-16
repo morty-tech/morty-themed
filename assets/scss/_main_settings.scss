@@ -1,0 +1,62 @@
+$border-radius:          .1rem !default;
+$border-radius-lg:       .2rem !default;
+$border-radius-sm:       .1rem !default;
+
+// COLORS
+$white: #fff;
+$almost-white:  #fcfcfc;
+$blue: #0076a3;
+$green: #2AC794;
+$blue-light: lighten($blue, 10%);
+$blue-lighter: #3DBBEA;
+$blue-lightest: lighten($blue-lighter, 15%);
+$blue-dark: darken($blue, 15%);
+$gray-light-5: #5c6469;
+$gray-light-c: #c1c1c1;
+$gray-light-b: #b1b1b1;
+$gray-light-d: #ddd;
+$gray-dark: #414141;
+$gray-darker: #333;
+$gray-darkest: #27343d;
+$gray-lightest-f9: #f9f9f9;
+$gray-lightest-bg: $gray-lightest-f9;
+
+$brand-primary: $blue;
+$brand-info: $blue-lighter;
+
+
+$brand-success: #5cb85c;
+$brand-success-dark: darken($brand-success, 20%);
+
+// FONTS
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: 'Lora', Georgia, "Times New Roman", Times, serif !default;
+$font-family-cursive: "Yellowtail", cursive;
+
+// HEADINGS
+$headings-font-weight: 200;
+$font-size-md: 1.15rem;
+$font-size-xxs: .7rem;
+$font-size-xl: 1.75rem;
+
+// BUTTONS
+$btn-padding-x-lg: 1rem;
+$btn-border-radius-lg: .1rem;
+
+// NAVBAR
+$navbar-padding-horizontal: 2rem;
+
+// not precise
+$navbar-height: 57px;
+$footer-height: 71px;
+
+$min-body-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+$side-nav-width: 200px;
+
+
+
+
+// NEW - WP
+
+$primary-width: 70%;
+$sidebar-width: 25%;

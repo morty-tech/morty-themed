@@ -34,7 +34,7 @@ function twentyseventeen_custom_header_setup() {
 	 * }
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'twentyseventeen_custom_header_args', array(
-		'default-image'      => get_parent_theme_file_uri( '/assets/images/header.jpg' ),
+		'default-image'      => get_parent_theme_file_uri( '/assets/images/space_day.png' ),
 		'width'              => 2000,
 		'height'             => 1200,
 		'flex-height'        => true,
