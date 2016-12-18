@@ -56,7 +56,6 @@
 
 	// Make navigation 'stick'.
 	function adjustScrollClass() {
-
 		// Make sure we're not on a mobile screen.
 		if ( 'none' === $menuToggle.css( 'display' ) ) {
 
@@ -78,7 +77,6 @@
 				}
 
 			} else {
-
 				// Remove 'fixed' class if nav is taller than two rows.
 				$navigation.removeClass( navigationFixedClass );
 			}

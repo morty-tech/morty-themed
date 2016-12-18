@@ -1,0 +1,25 @@
+.navigation-top {
+  // background: $gray-darkest;
+  // border-color: $gray-darkest;
+  //
+  // a {
+  //   color: $white;
+  //
+  // }
+}
+
+.main-navigation {
+  .custom-logo-link {
+    float: left;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    img {
+      max-height: 40px;
+    }
+  }
+
+  .menu-top-nav-container {
+    float: right;
+  }
+}

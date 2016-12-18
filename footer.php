@@ -16,27 +16,46 @@
 
 		</div><!-- #content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer class="footer" role="contentinfo">
 			<div class="wrap">
-				<?php
-				get_template_part( 'template-parts/footer/footer', 'widgets' );
-
-				if ( has_nav_menu( 'social' ) ) : ?>
-					<nav class="social-navigation" role="navigation" aria-label="<?php _e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'depth'          => 1,
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
-							) );
-						?>
-					</nav><!-- .social-navigation -->
-				<?php endif;
-
-				get_template_part( 'template-parts/footer/site', 'info' );
-				?>
+				<div class="footer-section">
+					<img class="footer-logo-image" src="<?php echo get_parent_theme_file_uri('/assets/images/logo-white.png') ?>" />
+					<div class="footer-section--content">
+						Morty is your modern, online mortgage. Find the right mortgage from the right lender at a great price.
+					</div>
+				</div>
+				<div class="footer-section">
+					<h4 class="footer-section--heading">Resources</h4>
+					<div class="footer-section--content">
+						<ul class="footer-section--content--list">
+							<li><a href="https://www.morty.co">Home</a></li>
+							<li><a href="https://www.morty.co/how-it-works">How Morty Works</a></li>
+							<li><a href="http://learn.morty.co/blog/">Our Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-section">
+					<h4 class="footer-section--heading">Company</h4>
+					<div class="footer-section--content">
+						<ul class="footer-section--content--list">
+							<li><a href="https://www.morty.co/contact">Contact</a></li>
+							<li><a href="https://www.morty.co/terms">Terms of Service</a></li>
+							<li><a href="https://www.morty.co/privacy">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-section">
+					<h4 class="footer-section--heading">Connect</h4>
+					<div class="footer-section--content">
+						<ul class="footer-section--content--list">
+							<li><a target="_blank" href="https://twitter.com/HiMorty"><i class="fa fa-twitter"></i> Twitter</a></li>
+							<li><a target="_blank" href="https://www.facebook.com/HiMorty/"><i class="fa fa-facebook"></i> Facebook</a></li>
+							<li><a target="_blank" href="https://www.linkedin.com/company/morty-inc."><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+							<li><a href="tel:844-457-8564"><i class="fa fa-phone"></i> (844) 457-8564</a></li>
+							<li><a href="mailto:hello@morty.co"><i class="fa fa-envelope"></i> Email</a></li>
+						</ul>
+					</div>
+				</div>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
