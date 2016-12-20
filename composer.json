@@ -1,0 +1,11 @@
+{
+    "name": "napsel/morty",
+    "description": "Theme for morty wordpress blog",
+    "authors": [
+        {
+            "name": "Nora Apsel",
+            "email": "napsel@gmail.com"
+        }
+    ],
+    "require": {}
+}
