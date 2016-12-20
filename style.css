@@ -2798,10 +2798,11 @@ object {
   .error404:not(.has-sidebar) #primary .page-content,
   .error404.has-sidebar #primary .page-content,
   body.page-two-column:not(.archive) #primary .entry-content,
-  body.page-two-column #comments {
+  body.page-two-column #comments,
+  #primary .items article {
     float: left;
     width: calc(100% / 3);
-    padding: 1rem; }
+    padding: 1em; }
   .blog .site-main > article,
   .archive .site-main > article,
   .search .site-main > article {
@@ -3131,9 +3132,8 @@ a.more-link {
   float: left;
   width: 100%; }
   .items .items-row {
-    float: left;
-    width: 100%;
-    margin: 0 -1rem; }
+    margin-left: -1rem;
+    margin-right: -1rem; }
   .items .items-heading {
     display: block;
     font-size: 11px;
@@ -3145,6 +3145,15 @@ a.more-link {
 .card .post-thumbnail {
   height: 180px;
   overflow: hidden; }
+
+.card.card-sm .post-thumbnail {
+  height: 120px; }
+
+.card.card-sm .entry-header {
+  padding: 0; }
+
+.card.card-sm .entry-title {
+  font-size: 1.25em; }
 
 .main-navigation .custom-logo-link {
   float: left;
@@ -3175,6 +3184,9 @@ a.more-link {
     padding: 3rem 0; }
     .site-content-contain .site-content .category-header {
       padding-top: 5rem; } }
+
+.footer-posts {
+  padding: 3em 1.5em 0; }
 
 .footer {
   text-align: center;

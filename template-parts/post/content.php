@@ -65,7 +65,27 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>
-		<?php twentyseventeen_entry_footer(); ?>
+		<?php twentyseventeen_entry_footer();
+
+		$categories = get_the_category();
+		$category_id = count($categories) > 0 ? $categories[0]->cat_ID : null;
+		$recent_posts = get_posts( array(
+			'posts_per_page'      => 3,
+			'post_status'         => 'publish',
+			'exclude'							=> get_the_ID(),
+			'category' 						=> $category_id
+		));
+
+		echo '<div class="footer-posts"><div class="items"><div class="items-heading">You might also like..</div><div class="items-row">';
+
+		foreach ( $recent_posts as $post ) : setup_postdata( $post );
+			get_template_part( 'template-parts/post/content-card-small', get_post_format($post) );
+		endforeach;
+		wp_reset_postdata();
+
+		echo '</div></div></div>';
+		?>
+
 	<?php endif; ?>
 
 </article><!-- #post-## -->

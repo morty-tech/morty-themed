@@ -46,9 +46,8 @@ a.more-link {
   width: 100%;
 
   .items-row{
-    float: left;
-    width: 100%;
-    margin: 0 -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .items-heading {
@@ -65,5 +64,19 @@ a.more-link {
   .post-thumbnail{
     height: 180px;
     overflow: hidden;
+  }
+
+  &.card-sm {
+    .post-thumbnail{
+      height: 120px;
+    }
+
+    .entry-header {
+      padding: 0;
+    }
+
+    .entry-title {
+      font-size: 1.25em;
+    }
   }
 }
