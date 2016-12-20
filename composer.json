@@ -1,6 +1,7 @@
 {
     "name": "napsel/mortythemed",
     "description": "Theme for morty wordpress blog",
+    "type": "wordpress-theme",
     "authors": [
         {
             "name": "Nora Apsel",
