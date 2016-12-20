@@ -364,8 +364,8 @@ template {
 .clear:after,
 .entry-content:before,
 .entry-content:after,
-.entry-footer:before,
-.entry-footer:after,
+.entry-supplemental-section:before,
+.entry-supplemental-section:after,
 .comment-content:before,
 .comment-content:after,
 .site-header:before,
@@ -393,7 +393,7 @@ template {
 
 .clear:after,
 .entry-content:after,
-.entry-footer:after,
+.entry-supplemental-section:after,
 .comment-content:after,
 .site-header:after,
 .site-content:after,
@@ -860,9 +860,9 @@ a:active {
 .items-heading a,
 .page-links a,
 .page-links a .page-number,
-.entry-footer a,
-.entry-footer .cat-links a,
-.entry-footer .tags-links a,
+.entry-supplemental-section a,
+.entry-supplemental-section .cat-links a,
+.entry-supplemental-section .tags-links a,
 .edit-link a,
 .post-navigation a,
 .logged-in-as a,
@@ -913,12 +913,12 @@ a .nav-title,
 .entry-meta a:hover,
 .page-links a:focus .page-number,
 .page-links a:hover .page-number,
-.entry-footer a:focus,
-.entry-footer a:hover,
-.entry-footer .cat-links a:focus,
-.entry-footer .cat-links a:hover,
-.entry-footer .tags-links a:focus,
-.entry-footer .tags-links a:hover,
+.entry-supplemental-section a:focus,
+.entry-supplemental-section a:hover,
+.entry-supplemental-section .cat-links a:focus,
+.entry-supplemental-section .cat-links a:hover,
+.entry-supplemental-section .tags-links a:focus,
+.entry-supplemental-section .tags-links a:hover,
 .post-navigation a:focus,
 .post-navigation a:hover,
 .pagination a:not(.prev):not(.next):focus,
@@ -1788,36 +1788,42 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 /* Entry footer */
 
-.entry-footer {
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+.entry-supplements {
 	margin-top: 2em;
-	padding: 2em 0;
 }
 
-.entry-footer .cat-links,
-.entry-footer .tags-links {
+.entry-supplemental-section {
+	border-top: 1px solid #eee;
+	padding: 2em 0;
+
+	&.entry-supplemental-section__no-border {
+		border-top: none;
+		padding-top: 1em;
+	}
+}
+
+.entry-supplemental-section .cat-links,
+.entry-supplemental-section .tags-links {
 	display: block;
 	font-size: 11px;
 	font-size: 0.6875rem;
 	font-weight: 800;
 	letter-spacing: 0.1818em;
-	padding-left: 2.5em;
 	position: relative;
 	text-transform: uppercase;
 }
 
-.entry-footer .cat-links + .tags-links {
+.entry-supplemental-section .cat-links + .tags-links {
 	margin-top: 1em;
 }
 
-.entry-footer .cat-links a,
-.entry-footer .tags-links a {
+.entry-supplemental-section .cat-links a,
+.entry-supplemental-section .tags-links a {
 	color: #333;
 }
 
-.entry-footer .cat-links .icon,
-.entry-footer .tags-links .icon {
+.entry-supplemental-section .cat-links .icon,
+.entry-supplemental-section .tags-links .icon {
 	color: #767676;
 	left: 0;
 	margin-right: 0.5em;
@@ -1825,30 +1831,17 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	top: 2px;
 }
 
-.entry-footer .edit-link {
+.entry-supplemental-section .edit-link {
 	display: inline-block;
 }
 
-.entry-footer .edit-link a.post-edit-link {
-	background-color: #222;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	color: #fff;
+.entry-supplemental-section .edit-link a.post-edit-link {
 	display: inline-block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 800;
-	margin-top: 2em;
-	padding: 0.7em 2em;
-	-webkit-transition: background-color 0.2s ease-in-out;
-	transition: background-color 0.2s ease-in-out;
-	white-space: nowrap;
+	font-size: 12px;
 }
 
-.entry-footer .edit-link a.post-edit-link:hover,
-.entry-footer .edit-link a.post-edit-link:focus {
+.entry-supplemental-section .edit-link a.post-edit-link:hover,
+.entry-supplemental-section .edit-link a.post-edit-link:focus {
 	background-color: #767676;
 }
 
@@ -3462,24 +3455,18 @@ object {
 		width: 100%;
 	}
 
-	.entry-footer {
+	.entry-supplemental-section {
 		display: table;
 		width: 100%;
 	}
 
-	.entry-footer .cat-tags-links {
+	.entry-supplemental-section .cat-tags-links {
 		display: table-cell;
 		vertical-align: middle;
 		width: 100%;
 	}
 
-	.entry-footer .edit-link {
-		display: table-cell;
-		text-align: right;
-		vertical-align: middle;
-	}
-
-	.entry-footer .edit-link a.post-edit-link {
+	.entry-supplemental-section .edit-link a.post-edit-link {
 		margin-top: 0;
 		margin-left: 1em;
 	}
@@ -3780,7 +3767,7 @@ object {
 		display: none !important;
 	}
 
-	.entry-footer,
+	.entry-supplemental-section,
 	#comments,
 	.site-footer,
 	.single-featured-image-header {

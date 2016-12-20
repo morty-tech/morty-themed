@@ -109,7 +109,7 @@ function twentyseventeen_entry_footer() {
 	// We don't want to output .entry-footer if it will be empty, so make sure its not.
 	if ( ( ( twentyseventeen_categorized_blog() && $categories_list ) || $tags_list ) || get_edit_post_link() ) {
 
-		echo '<footer class="entry-footer">';
+		echo '<div class="entry-supplemental-section entry-supplemental-section__no-border">';
 
 			if ( 'post' === get_post_type() ) {
 				if ( $tags_list ) {
@@ -125,7 +125,7 @@ function twentyseventeen_entry_footer() {
 
 			twentyseventeen_edit_link();
 
-		echo '</footer> <!-- .entry-footer -->';
+		echo '</div> <!-- .entry-supplemental-section -->';
 	}
 }
 endif;

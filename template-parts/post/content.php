@@ -65,26 +65,57 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>
-		<?php twentyseventeen_entry_footer();
 
-		$categories = get_the_category();
-		$category_id = count($categories) > 0 ? $categories[0]->cat_ID : null;
-		$recent_posts = get_posts( array(
-			'posts_per_page'      => 3,
-			'post_status'         => 'publish',
-			'exclude'							=> get_the_ID(),
-			'category' 						=> $category_id
-		));
+		<div class="entry-supplements">
+			<div class="entry-supplemental-section entry-supplemental-section__no-border">
+				<div class="supplemental-heading">Read More About..</div>
 
-		echo '<div class="footer-posts"><div class="items"><div class="items-heading">You might also like..</div><div class="items-row">';
+				<?php echo get_the_tag_list('<ul class="tags-list"><li>','</li><li>','</li></ul>'); ?>
 
-		foreach ( $recent_posts as $post ) : setup_postdata( $post );
-			get_template_part( 'template-parts/post/content-card-small', get_post_format($post) );
-		endforeach;
-		wp_reset_postdata();
+			</div>
 
-		echo '</div></div></div>';
-		?>
+			<div class="entry-supplemental-section">
+					<div class="supplemental-heading">Share The Love!</div>
+					<ul class="button-list">
+						<li><a
+							href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url( get_permalink() ); ?>"
+							target="_blank"
+							class="btn btn-primary-outline"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a
+							href="https://twitter.com/intent/tweet?text=<?php echo esc_url( the_title() ); ?>&url=<?php echo esc_url( get_permalink() ); ?>&via=HiMorty"
+							target="_blank"
+							class="btn btn-primary-outline"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a
+							href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo esc_url( get_permalink() ); ?>&amp;title=<?php echo esc_url( the_title() ); ?>&amp;summary=<?php echo esc_url( get_permalink() ); ?>"
+							target="_blank"
+							class="btn btn-primary-outline"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+						<li><a
+							href="mailto:?subject=<?php echo esc_url( the_title() ); ?>&amp;body=<?php echo esc_url( get_permalink() ); ?>"
+							class="btn btn-primary-outline"><i class="fa fa-envelope"></i> Email</a></li>
+					</ul>
+			</div>
+
+			<?php
+			$categories = get_the_category();
+			$category_id = count($categories) > 0 ? $categories[0]->cat_ID : null;
+			$recent_posts = get_posts( array(
+				'posts_per_page'      => 3,
+				'post_status'         => 'publish',
+				'exclude'							=> get_the_ID(),
+				'category' 						=> $category_id
+			));
+
+			echo '<div class="entry-supplemental-section"><div class="items"><div class="items-heading">You might also like..</div><div class="items-row">';
+
+			foreach ( $recent_posts as $post ) : setup_postdata( $post );
+				get_template_part( 'template-parts/post/content-card-small', get_post_format($post) );
+			endforeach;
+			wp_reset_postdata();
+
+			echo '</div></div></div>';
+			?>
+
+		</div>
 
 	<?php endif; ?>
 
