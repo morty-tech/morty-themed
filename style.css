@@ -3142,6 +3142,17 @@ a.more-link {
 .card.card-sm .entry-title {
   font-size: 1.25em; }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.navigation-top.navigation-top-hide {
+  opacity: 0; }
+  .navigation-top.navigation-top-hide.site-navigation-fixed {
+    animation: fadeIn .25s forwards; }
+
 .main-navigation .custom-logo-link {
   float: left;
   padding-top: 0;
@@ -3254,3 +3265,14 @@ ul.tags-list {
       width: 100%; }
       .footer .footer-section--content--list li a {
         color: #c1c1c1; }
+
+.error-404 {
+  min-height: calc(100vh - 419px);
+  margin-top: 24px;
+  padding: 5em 0; }
+  .error-404 .error-404-image-container {
+    text-align: center; }
+    .error-404 .error-404-image-container .error-404-image {
+      margin-top: 2em;
+      max-width: 50vw;
+      max-height: 40vh; }

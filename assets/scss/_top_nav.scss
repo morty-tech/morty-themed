@@ -1,11 +1,16 @@
+@keyframes fadeIn{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .navigation-top {
-  // background: $gray-darkest;
-  // border-color: $gray-darkest;
-  //
-  // a {
-  //   color: $white;
-  //
-  // }
+
+  &.navigation-top-hide{
+    opacity: 0;
+    &.site-navigation-fixed {
+      animation: fadeIn .25s forwards;
+    }
+  }
 }
 
 .main-navigation {

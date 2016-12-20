@@ -33,9 +33,10 @@
 
 		<?php if ( is_front_page() ) : ?>
 			<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+		<?php endif; ?>
 
-		<?php elseif ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
+		<?php if ( has_nav_menu( 'top' ) ) : ?>
+			<div class="navigation-top <?php if ( is_front_page() ) { echo "navigation-top-hide"; } ?>">
 				<div class="wrap">
 					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 				</div><!-- .wrap -->
