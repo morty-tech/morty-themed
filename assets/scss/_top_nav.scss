@@ -14,17 +14,66 @@
 }
 
 .main-navigation {
+  .menu-toggle {
+    display: inline-block;
+    float: right;
+    &:focus {
+      outline: none;
+    }
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   .custom-logo-link {
-    float: left;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: inline;
 
     img {
-      max-height: 40px;
+      max-height: 30px;
+      margin-top: .65em;
+      margin-left: 1em;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      float: left;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      img {
+        max-height: 40px;
+        margin: 0;
+      }
     }
   }
 
   .menu-top-nav-container {
-    float: right;
+    @media screen and (min-width: $tablet-width) {
+      float: right;
+    }
+
+    .menu {
+      li {
+        a {
+          // font-weight: 300;
+        }
+
+        &:last-child {
+          a {
+            @media screen and (min-width: 48em) {
+              background: #333;
+              color: $white;
+              padding: .65em 1.65em;
+              border-radius: 2px;
+              font-weight: 100;
+              letter-spacing: .5px;
+              margin-left: 2em;
+              &:hover {
+                background: #767676;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

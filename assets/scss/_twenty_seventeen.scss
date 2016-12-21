@@ -1702,7 +1702,10 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 body:not(.twentyseventeen-front-page) .entry-header {
-	padding: 1em 0;
+
+	@media screen and (min-width: $tablet-width) {
+		padding: .8em 0;
+	}
 }
 
 body:not(.twentyseventeen-front-page) .entry-header,
