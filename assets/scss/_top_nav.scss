@@ -15,11 +15,22 @@
     &.navigation-top-hide{
       opacity: 0;
       &.site-navigation-fixed {
+        top: 0;
         animation: fadeIn .25s forwards;
       }
     }
   }
 }
+
+.admin-bar .custom-header + .navigation-top.navigation-top-hide.site-navigation-fixed{
+  @media screen and (min-width: $tablet-width) {
+    &.navigation-top-hide.site-navigation-fixed {
+      top: 32px;
+    }
+  }
+}
+
+
 
 .navigation-top {
   .wrap {

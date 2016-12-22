@@ -3180,7 +3180,12 @@ a.more-link {
       .custom-header + .navigation-top.navigation-top-hide {
         opacity: 0; }
         .custom-header + .navigation-top.navigation-top-hide.site-navigation-fixed {
+          top: 0;
           animation: fadeIn .25s forwards; } }
+
+@media screen and (min-width: 48em) {
+  .admin-bar .custom-header + .navigation-top.navigation-top-hide.site-navigation-fixed.navigation-top-hide.site-navigation-fixed {
+    top: 32px; } }
 
 @media screen and (min-width: 48em) {
   .navigation-top .wrap {
