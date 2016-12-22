@@ -3201,24 +3201,24 @@ a.more-link {
     .main-navigation .menu-toggle {
       display: none; } }
 
-.main-navigation .menu-top-nav-container {
+.main-navigation .menu-top-nav-container, .main-navigation .menu-top-menu-container {
   position: absolute;
   top: 50px;
   width: 100%;
   z-index: 3; }
   @media screen and (min-width: 48em) {
-    .main-navigation .menu-top-nav-container {
+    .main-navigation .menu-top-nav-container, .main-navigation .menu-top-menu-container {
       position: static;
       top: inherit;
       width: auto; } }
-  .main-navigation .menu-top-nav-container .menu li a {
+  .main-navigation .menu-top-nav-container .menu li a, .main-navigation .menu-top-menu-container .menu li a {
     padding: .5em 1.25em;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .5px;
     color: #003f57; }
   @media screen and (min-width: 48em) {
-    .main-navigation .menu-top-nav-container .menu li:last-child {
+    .main-navigation .menu-top-nav-container .menu li:last-child, .main-navigation .menu-top-menu-container .menu li:last-child {
       float: right; } }
 
 @media screen and (min-width: 48em) {
