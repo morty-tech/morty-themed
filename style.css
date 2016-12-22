@@ -3275,8 +3275,10 @@ a.more-link {
     margin-top: 125px;
     padding: 3rem 0; } }
 
-.home .site-content-contain .site-content {
-  margin-top: 0; }
+@media screen and (min-width: 48em) {
+  .home .site-content-contain .site-content {
+    margin-top: 0;
+    padding: 10em 0; } }
 
 .footer-posts {
   padding: 3em 1.5em 0; }
