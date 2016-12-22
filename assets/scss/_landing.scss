@@ -1,8 +1,3 @@
-#blog-brand{
-
-}
-
-
 body.has-header-image .site-description{
   color: $blue;
   letter-spacing: -1px;
@@ -22,7 +17,9 @@ body.has-header-image .site-description{
 }
 
 .site-branding {
-  padding: 3em 0 15em;
+  @media screen and (min-width: $tablet-width) {
+    padding: 3em 0 15em;
+  }
 
   .site-branding-text{
     text-align: center;

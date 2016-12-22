@@ -12,12 +12,15 @@
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Top Menu', 'twentyseventeen' ); ?>">
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false"><?php echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) ); echo twentyseventeen_get_svg( array( 'icon' => 'close' ) ); _e( 'Menu', 'twentyseventeen' ); ?></button>
 
-	<?php the_custom_logo(); ?>
 
 	<?php wp_nav_menu( array(
 		'theme_location' => 'top',
 		'menu_id'        => 'top-menu',
 	) ); ?>
 
+	<div class="menu-top-nav-blog-info">
+		<?php the_custom_logo(); ?>
+		<h5 class="menu-top-nav-blog-description"><?php echo get_bloginfo( 'description') ?></h5>
+	</div>
 
 </nav><!-- #site-navigation -->

@@ -58,26 +58,17 @@
 	function adjustScrollClass() {
 		// Make sure we're not on a mobile screen.
 		if ( 'none' === $menuToggle.css( 'display' ) ) {
-
-			// Make sure the nav isn't taller than two rows.
-			if ( navIsNotTooTall ) {
-
-				// When there's a custom header image or video, the header offset includes the height of the navigation.
-				if ( isFrontPage && ( $body.hasClass( 'has-header-image' ) || $body.hasClass( 'has-header-video' ) ) ) {
-					headerOffset = $customHeader.innerHeight() - navigationOuterHeight;
-				} else {
-					headerOffset = $customHeader.innerHeight();
-				}
-
-				// If the scroll is more than the custom header, set the fixed class.
-				if ( $( window ).scrollTop() >= headerOffset ) {
-					$navigation.addClass( navigationFixedClass );
-				} else {
-					$navigation.removeClass( navigationFixedClass );
-				}
-
+			// When there's a custom header image or video, the header offset includes the height of the navigation.
+			if ( isFrontPage && ( $body.hasClass( 'has-header-image' ) || $body.hasClass( 'has-header-video' ) ) ) {
+				headerOffset = $customHeader.innerHeight() - navigationOuterHeight;
 			} else {
-				// Remove 'fixed' class if nav is taller than two rows.
+				headerOffset = $customHeader.innerHeight();
+			}
+
+			// If the scroll is more than the custom header, set the fixed class.
+			if ( $( window ).scrollTop() >= headerOffset ) {
+				$navigation.addClass( navigationFixedClass );
+			} else {
 				$navigation.removeClass( navigationFixedClass );
 			}
 		}

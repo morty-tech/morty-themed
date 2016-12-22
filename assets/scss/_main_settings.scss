@@ -47,12 +47,7 @@ $btn-border-radius-lg: .1rem;
 $navbar-padding-horizontal: 2rem;
 
 // not precise
-$navbar-height: 57px;
 $footer-height: 71px;
-
-$min-body-height: calc(100vh - #{$navbar-height} - #{$footer-height});
-$side-nav-width: 200px;
-
 $font-size-sm: .8rem;
 
 
@@ -63,3 +58,4 @@ $primary-width: 70%;
 $sidebar-width: 25%;
 $tablet-width: 48em;
 $mobile-width: 30em;
+$navbar-height: 125px;

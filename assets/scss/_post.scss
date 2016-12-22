@@ -1,5 +1,5 @@
 .single-featured-image-header {
-  max-height: 75vh;
+  max-height: 60vh;
   position: relative;
 
 
@@ -27,10 +27,11 @@
 .site-content-contain {
   .site-content {
     @media screen and (min-width: 48em) {
+      margin-top: $navbar-height;
       padding: 3rem 0;
 
       .category-header{
-        padding-top: 5rem;
+        // padding-top: 5rem;
       }
     }
   }
