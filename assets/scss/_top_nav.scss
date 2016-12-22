@@ -55,6 +55,17 @@
 
 
   .menu-top-nav-container {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 3;
+
+    @media screen and (min-width: $tablet-width) {
+      position: static;
+      top: inherit;
+      width: auto;
+    }
+
     .menu {
       li {
         a {
@@ -65,7 +76,9 @@
           color: $blue-dark;
         }
         &:last-child{
-          float: right;
+          @media screen and (min-width: $tablet-width) {
+            float: right;
+          }
         }
       }
     }
