@@ -1,23 +1,24 @@
 .single-featured-image-header {
+  margin-top: $navbar-height;
   max-height: 60vh;
   position: relative;
-
 
   .single-featured-title {
     display: none;
     @media screen and (min-width: $mobile-width) {
       display: block;
       position: absolute;
-      bottom: 3rem;
+      bottom: 1rem;
       left: 5rem;
       background: rgba(0,0,0,.8);
       color: $gray-light-d;
-      padding: 1rem 1.5rem;
+      padding: .5rem 1rem;
       max-width: 60%;
 
       h1 {
         @media screen and (min-width: $tablet-width) {
           font-size: 2.5rem;
+          margin-bottom: .5em;
         }
       }
     }
@@ -33,10 +34,12 @@
   }
 }
 
-.home .site-content-contain .site-content {
-  @media screen and (min-width: 48em) {
-    margin-top: 0;
-    padding: 10em 0;
+.home, .has-header-image {
+  .site-content-contain .site-content {
+    @media screen and (min-width: 48em) {
+      margin-top: 0;
+      padding: 5em 0;
+    }
   }
 }
 

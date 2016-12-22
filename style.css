@@ -1470,7 +1470,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 @media screen and (min-width: 48em) {
   body:not(.twentyseventeen-front-page) .entry-header {
-    padding: .8em 0; } }
+    padding: .6em 0; } }
 
 body:not(.twentyseventeen-front-page) .entry-header,
 body:not(.twentyseventeen-front-page) .entry-content,
@@ -3252,6 +3252,7 @@ a.more-link {
       display: block; } }
 
 .single-featured-image-header {
+  margin-top: 125px;
   max-height: 60vh;
   position: relative; }
   .single-featured-image-header .single-featured-title {
@@ -3260,15 +3261,16 @@ a.more-link {
       .single-featured-image-header .single-featured-title {
         display: block;
         position: absolute;
-        bottom: 3rem;
+        bottom: 1rem;
         left: 5rem;
         background: rgba(0, 0, 0, 0.8);
         color: #ddd;
-        padding: 1rem 1.5rem;
+        padding: .5rem 1rem;
         max-width: 60%; } }
   @media screen and (min-width: 30em) and (min-width: 48em) {
     .single-featured-image-header .single-featured-title h1 {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem;
+      margin-bottom: .5em; } }
 
 @media screen and (min-width: 48em) {
   .site-content-contain .site-content {
@@ -3276,9 +3278,9 @@ a.more-link {
     padding: 3rem 0; } }
 
 @media screen and (min-width: 48em) {
-  .home .site-content-contain .site-content {
+  .home .site-content-contain .site-content, .has-header-image .site-content-contain .site-content {
     margin-top: 0;
-    padding: 10em 0; } }
+    padding: 5em 0; } }
 
 .footer-posts {
   padding: 3em 1.5em 0; }

@@ -29,7 +29,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php
 				// get all the categories from the database
-				$cats = get_categories();
+
+				$featured_cat = get_category_by_slug( 'featured' );
+
+				$args = $featured_cat ? array('parent' => $featured_cat->term_id, 'number' => 3) : array();
+				$cats = get_categories( $args );
 
 				// loop through the categries
 				foreach ($cats as $cat) {
@@ -39,7 +43,11 @@ get_header(); ?>
 
 					echo '<div class="items"><div class="items-heading"><a href="'.get_category_link( $cat->term_id ).'">'.$cat->name.'</a></div><div class="items-row">';
 					// create a custom wordpress query
-					query_posts("cat=$cat_id&posts_per_page=3");
+					query_posts( array(
+						'cat' => $cat_id,
+						'posts_per_page' => 3,
+						'order_by' => 'date'
+					));
 					// start the wordpress loop!
 					while (have_posts()) : the_post();
 
