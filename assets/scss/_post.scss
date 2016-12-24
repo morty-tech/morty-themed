@@ -34,7 +34,7 @@
   }
 }
 
-.home, .has-header-image {
+.home, .single-post {
   .site-content-contain .site-content {
     @media screen and (min-width: 48em) {
       margin-top: 0;
@@ -58,7 +58,6 @@
   margin: 1em 0;
 
   li {
-
     + li {
       margin-top: 1em;
     }
@@ -124,5 +123,15 @@ ul.tags-list {
         content: "";
       }
     }
+  }
+}
+
+.washington-outer-wrap {
+  max-width: 600px !important;
+  margin: 0 auto;
+  padding: 1em 0 1em;
+
+  .washington-element-title-content span{
+    // font-size: 1.75rem !important;
   }
 }

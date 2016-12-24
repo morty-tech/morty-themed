@@ -60,6 +60,11 @@ get_header(); ?>
 
 		endif; ?>
 
+			<div class="entry-supplements entry-supplements__extra_margin">
+				<div class="entry-supplemental-section">
+					<!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com :: Campaign Title: Blog Newsletter Signup --><div id="om-hpogfvcg5knjlp7n-holder"></div><script>var hpogfvcg5knjlp7n,hpogfvcg5knjlp7n_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){hpogfvcg5knjlp7n_poll(function(){if(window['om_loaded']){if(!hpogfvcg5knjlp7n){hpogfvcg5knjlp7n=new OptinMonsterApp();return hpogfvcg5knjlp7n.init({"u":"20568.479597","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;hpogfvcg5knjlp7n=new OptinMonsterApp();hpogfvcg5knjlp7n.init({"u":"20568.479597","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->

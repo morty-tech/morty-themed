@@ -1793,6 +1793,12 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .entry-supplements {
 	margin-top: 2em;
+	float: left;
+	width: 100%;
+
+	&.entry-supplements__extra_margin {
+		margin-top: 4em;
+	}
 }
 
 .entry-supplemental-section {

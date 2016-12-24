@@ -1540,7 +1540,11 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 /* Entry footer */
 .entry-supplements {
-  margin-top: 2em; }
+  margin-top: 2em;
+  float: left;
+  width: 100%; }
+  .entry-supplements.entry-supplements__extra_margin {
+    margin-top: 4em; }
 
 .entry-supplemental-section {
   border-top: 1px solid #eee;
@@ -3131,7 +3135,9 @@ a.more-link {
   width: 100%; }
   .items .items-row {
     margin-left: -1rem;
-    margin-right: -1rem; }
+    margin-right: -1rem;
+    float: left;
+    width: 100%; }
 
 .items-heading, .supplemental-heading {
   display: block;
@@ -3278,7 +3284,7 @@ a.more-link {
     padding: 3rem 0; } }
 
 @media screen and (min-width: 48em) {
-  .home .site-content-contain .site-content, .has-header-image .site-content-contain .site-content {
+  .home .site-content-contain .site-content, .single-post .site-content-contain .site-content {
     margin-top: 0;
     padding: 5em 0; } }
 
@@ -3334,6 +3340,11 @@ ul.tags-list {
       padding-right: 0; }
       ul.tags-list li:last-child:after {
         content: ""; }
+
+.washington-outer-wrap {
+  max-width: 600px !important;
+  margin: 0 auto;
+  padding: 1em 0 1em; }
 
 .footer {
   text-align: center;
