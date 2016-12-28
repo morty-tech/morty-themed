@@ -16,14 +16,21 @@ if ( ! function_exists( 'twentyseventeen_posted_on' ) ) :
 function twentyseventeen_posted_on() {
 
 	// Get the author name; wrap it in a link.
+	$id = get_the_ID();
+	$author = get_field('author', $id);
+	if (!$author) {
+		$author = get_the_author();
+	}
+
 	$byline = sprintf(
 		/* translators: %s: post author */
 		__( 'by %s', 'twentyseventeen' ),
-		'<span class="author vcard">' . get_the_author() . '</span>'
+		'<span class="author vcard">' . $author . '</span>'
 	);
 
 	// Finally, let's write all of this to the page.
 	echo '<span class="posted-on">' . twentyseventeen_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<div>'. twentyseventeen_edit_link() .'</div>';
 }
 endif;
 

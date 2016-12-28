@@ -135,3 +135,8 @@ ul.tags-list {
     // font-size: 1.75rem !important;
   }
 }
+
+.byline + .edit-link {
+  margin-left: 10px;
+  text-decoration: underline;
+}

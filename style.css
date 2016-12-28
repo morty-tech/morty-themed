@@ -3346,6 +3346,10 @@ ul.tags-list {
   margin: 0 auto;
   padding: 1em 0 1em; }
 
+.byline + .edit-link {
+  margin-left: 10px;
+  text-decoration: underline; }
+
 .footer {
   text-align: center;
   background: #27343d;
