@@ -3118,7 +3118,9 @@ body.has-header-image .site-description {
   background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.4) 100%); }
 
 a.more-link {
-  color: #2AC794;
+  color: #0076a3;
+  text-transform: uppercase;
+  font-weight: 600;
   box-shadow: none;
   font-size: .8rem; }
 
@@ -3135,9 +3137,7 @@ a.more-link {
   width: 100%; }
   .items .items-row {
     margin-left: -1rem;
-    margin-right: -1rem;
-    float: left;
-    width: 100%; }
+    margin-right: -1rem; }
 
 .items-heading, .supplemental-heading {
   display: block;
@@ -3149,6 +3149,10 @@ a.more-link {
 
 .card {
   margin-bottom: 2em; }
+  .card .entry-title {
+    font-size: 1.35em; }
+  .card .entry-summary {
+    font-size: 1em; }
   .card .post-thumbnail {
     height: 200px;
     overflow: hidden; }
@@ -3163,7 +3167,10 @@ a.more-link {
   .card.card-sm .entry-header {
     padding: 0; }
   .card.card-sm .entry-title {
-    font-size: 1.25em; }
+    font-size: 1.1em; }
+  .card.card--resource {
+    box-shadow: 1px 1px 1px rgba(200, 200, 200, 0.5);
+    padding: .5em; }
 
 #primary .items article {
   padding: 1em; }
@@ -3261,6 +3268,8 @@ a.more-link {
   margin-top: 125px;
   max-height: 60vh;
   position: relative; }
+  .single-featured-image-header img {
+    min-width: 80%; }
   .single-featured-image-header .single-featured-title {
     display: none; }
     @media screen and (min-width: 30em) {

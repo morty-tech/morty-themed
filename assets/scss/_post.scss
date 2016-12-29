@@ -3,6 +3,10 @@
   max-height: 60vh;
   position: relative;
 
+  img {
+    min-width: 80%;
+  }
+
   .single-featured-title {
     display: none;
     @media screen and (min-width: $mobile-width) {

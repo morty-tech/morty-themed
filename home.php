@@ -55,7 +55,7 @@ get_header(); ?>
 
 					endwhile; // done our wordpress loop. Will start again for each category
 
-					echo '</div></div><div class="entry-content">';
+					echo '</div></div>';
 				} // done the foreach statement ?>
 
 				<div class="entry-supplements entry-supplements__extra_margin">

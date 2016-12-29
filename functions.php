@@ -333,10 +333,9 @@ add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 10;
+    return 15;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length' );
-
 
 function archive_title($title) {
 	if ( is_category() ) {
