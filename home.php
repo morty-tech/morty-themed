@@ -30,9 +30,17 @@ get_header(); ?>
 			<?php
 				// get all the categories from the database
 
-				$featured_cat = get_category_by_slug( 'featured' );
+				$exclude_cat_slugs = array('morty');
+				$exclude_cat_ids = array();
 
-				$args = $featured_cat ? array('parent' => $featured_cat->term_id, 'number' => 3) : array();
+				foreach ( $exclude_cat_slugs as $slug ) {
+					$c = get_category_by_slug( $slug );
+					if (c) {
+						$exclude_cat_ids[] = $c->term_id;
+					}
+				}
+
+				$args = array('exclude' => $exclude_cat_ids, 'number' => 5);
 				$cats = get_categories( $args );
 
 				// loop through the categries
