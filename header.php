@@ -18,9 +18,42 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-57x57.png') ?>">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-60x60.png') ?>">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-72x72.png') ?>">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-76x76.png') ?>">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-114x114.png') ?>">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-120x120.png') ?>">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-144x144.png') ?>">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-152x152.png') ?>">
+<link rel="icon" type="image/png" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/favicon-32x32.png') ?>" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/favicon-96x96.png') ?>" sizes="96x96">
+<link rel="icon" type="image/png" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/favicon-16x16.png') ?>" sizes="16x16">
+<link rel="manifest" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/manifest.json') ?>">
+<link rel="mask-icon" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/safari-pinned-tab.svg') ?>" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="<?php echo get_parent_theme_file_uri('/assets/images/favicons/mstile-144x144.png') ?>">
+<meta name="theme-color" content="#ffffff">
+
+<?php if ( is_prod() ) : ?>
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1764001357210273');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1764001357210273&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+<?php endif; ?>
 
 <?php wp_head(); ?>
 </head>
@@ -46,6 +79,7 @@
 	</header><!-- #masthead -->
 
 	<?php
+
 	// If a regular post or page, and not the front page, show the featured image.
 	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
 		echo '<div class="single-featured-image-header">';
