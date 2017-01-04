@@ -30,7 +30,7 @@
 						<ul class="footer-section--content--list">
 							<li><a href="https://www.morty.co">Home</a></li>
 							<li><a href="https://www.morty.co/how-it-works">How Morty Works</a></li>
-							<li><a href="http://learn.morty.co/blog/">Our Blog</a></li>
+							<li><a href="https://blog.morty.co">Our Blog</a></li>
 						</ul>
 					</div>
 				</div>
