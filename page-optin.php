@@ -20,7 +20,7 @@ get_header(); ?>
 	width:65%;
 	margin: 0 auto;
 	position: relative;
-	top:12%;
+	margin-top:14%;
 }
 /*
 Specific to this page, don't move to main stylesheet 
