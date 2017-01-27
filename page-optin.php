@@ -13,6 +13,7 @@ get_header(); ?>
 	background: url(<?php echo $background[0]; ?>);
 	background-size: cover;
 	background-position: top center;
+	background-repeat: no-repeat;
 	min-height: 700px;
 }
 .optin-content {
