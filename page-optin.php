@@ -22,6 +22,12 @@ get_header(); ?>
 	position: relative;
 	top:12%;
 }
+/*
+Specific to this page, don't move to main stylesheet 
+*/
+.single-featured-title	{
+	display:none;
+}
 </style>
 
 <div class="wrap">
