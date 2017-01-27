@@ -3,15 +3,14 @@
  * Template Name: Optin
  */
 
-if (get_field('background_image') != "") {
-	$bgimage = get_field('background_image');
-}
+
+$background = wp_get_attachment_image_src( get_post_thumbnail_id( $page->ID ), 'full' );
 get_header(); ?>
 
 
 <style>
 #content {
-	background: url(<?php echo $bgimage; ?>);
+	background: url(<?php echo $background[0]; ?>);
 	background-size: cover;
 	background-position: top center;
 	min-height: 700px;
@@ -21,9 +20,6 @@ get_header(); ?>
 	margin: 0 auto;
 	position: relative;
 	top:12%;
-}
-.optin-form {
-	
 }
 </style>
 
@@ -37,9 +33,6 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="optin-content">
 						<?php the_content(); ?>
-						<div class="optin-form">
-							<?php the_field('form_code');?>
-						<div>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 
