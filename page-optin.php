@@ -12,9 +12,9 @@ get_header(); ?>
 #content {
 	background: url(<?php echo $background[0]; ?>);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 	background-repeat: no-repeat;
-	min-height: 700px;
+	min-height: calc(100vh - 150px);
 }
 .optin-content {
 	width:75%;
@@ -23,7 +23,7 @@ get_header(); ?>
 	margin-top:14%;
 }
 /*
-Specific to this page, don't move to main stylesheet 
+Specific to this page, don't move to main stylesheet
 */
 .single-featured-title	{
 	display:none;
