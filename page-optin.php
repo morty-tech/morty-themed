@@ -17,7 +17,7 @@ get_header(); ?>
 	min-height: 700px;
 }
 .optin-content {
-	width:65%;
+	width:75%;
 	margin: 0 auto;
 	position: relative;
 	margin-top:14%;
