@@ -13,6 +13,7 @@ get_header(); ?>
 	background: url(<?php echo $background[0]; ?>);
 	background-size: cover;
 	background-position: top center;
+	background-repeat: no-repeat;
 	min-height: 700px;
 }
 .optin-content {
@@ -20,6 +21,12 @@ get_header(); ?>
 	margin: 0 auto;
 	position: relative;
 	top:12%;
+}
+/*
+Specific to this page, don't move to main stylesheet 
+*/
+.single-featured-title	{
+	display:none;
 }
 </style>
 
