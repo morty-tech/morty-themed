@@ -17,10 +17,10 @@ get_header(); ?>
 	min-height: 700px;
 }
 .optin-content {
-	width:65%;
+	width:75%;
 	margin: 0 auto;
 	position: relative;
-	top:12%;
+	margin-top:14%;
 }
 /*
 Specific to this page, don't move to main stylesheet 
