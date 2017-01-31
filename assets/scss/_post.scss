@@ -148,24 +148,24 @@ ul.tags-list {
 .optin-content {
 	margin: 0 auto;
 	position: relative;
-  @media screen and (min-width: $mobile-width) {
+  @media screen and (min-width: $tablet-width) {
     width:75%;
   }
 
   div#om-ihrbnbpzmkuygweh{
     #boone-body {
       padding: 20px !important;
-      @media screen and (min-width: $mobile-width) {
+      @media screen and (min-width: $tablet-width) {
         padding: 40px !important;
       }
     }
     #boone-element-title {
-      font-size: 1.25em !important;
+      font-size: 1.5em !important;
       border-bottom: solid 1px rgba(0,0,0,.05);
       padding-bottom: .5em;
       color: #555;
 
-      @media screen and (min-width: $mobile-width) {
+      @media screen and (min-width: $tablet-width) {
         font-size: 1.5em !important;
         text-transform: uppercase;
         padding-right: 2.5em;
