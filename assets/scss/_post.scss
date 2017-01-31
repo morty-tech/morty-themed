@@ -174,12 +174,11 @@ ul.tags-list {
     }
     #boone-element-tagline-content {
       background: rgba(0,0,0,.05);
+      padding: 1.5em 1.5em .5em;
 
       ul {
         list-style: none;
-        padding: 1.5em;
-        margin-top: .5em;
-        margin-bottom: 2em;
+        margin:0 0 1em;
         li {
           margin: 0 0 .75em 0;
           font-weight: 600;
