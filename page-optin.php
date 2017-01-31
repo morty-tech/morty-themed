@@ -16,12 +16,6 @@ get_header(); ?>
 	background-repeat: no-repeat;
 	min-height: calc(100vh - 150px);
 }
-.optin-content {
-	width:75%;
-	margin: 0 auto;
-	position: relative;
-	margin-top: 40px;
-}
 /*
 Specific to this page, don't move to main stylesheet
 */
