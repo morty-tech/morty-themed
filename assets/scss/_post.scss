@@ -173,9 +173,10 @@ ul.tags-list {
       }
     }
     #boone-element-tagline-content {
+      background: rgba(0,0,0,.05);
+
       ul {
         list-style: none;
-        background: rgba(0,0,0,.05);
         padding: 1.5em;
         margin-top: .5em;
         margin-bottom: 2em;
@@ -188,9 +189,8 @@ ul.tags-list {
             margin-bottom: 0;
           }
         }
-      } + div {
-        font-weight: 600;
       }
+
     }
 
     #boone-field-submit {
