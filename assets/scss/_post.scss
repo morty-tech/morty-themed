@@ -165,16 +165,18 @@ ul.tags-list {
       padding-bottom: 1em;
 
       @media screen and (min-width: $mobile-width) {
-        font-size: 1.15em !important;
+        font-size: 1.35em !important;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 800;
+        padding-right: 2em;
+        padding-left: 2em;
       }
     }
     #boone-element-tagline-content {
       ul {
         list-style: none;
         background: rgba(0,0,0,.05);
-        padding: 1.5em 0;
+        padding: 1.5em;
         margin-top: .5em;
         margin-bottom: 2em;
         li {
@@ -184,7 +186,17 @@ ul.tags-list {
             margin-bottom: 0;
           }
         }
+      } + div {
+        font-weight: 600;
       }
+    }
+
+    #boone-field-submit {
+      font-weight: 400;
+    }
+
+    #boone-field-email {
+      text-align: center;
     }
   }
 }
