@@ -3368,7 +3368,7 @@ ul.tags-list {
       margin-top: 10px;
       width: 75%; } }
   .optin-content div#om-ihrbnbpzmkuygweh #boone-body {
-    padding: 10px !important; }
+    padding: 20px !important; }
     @media screen and (min-width: 30em) {
       .optin-content div#om-ihrbnbpzmkuygweh #boone-body {
         padding: 40px !important; } }
@@ -3382,9 +3382,12 @@ ul.tags-list {
     border-top: solid 1px rgba(0, 0, 0, 0.05);
     border-bottom: solid 1px rgba(0, 0, 0, 0.05);
     padding: 1.5em 0;
-    margin-top: .5em; }
+    margin-top: .5em;
+    margin-bottom: 2em; }
     .optin-content div#om-ihrbnbpzmkuygweh #boone-element-tagline-content ul li {
       margin: 0 0 .75em 0; }
+      .optin-content div#om-ihrbnbpzmkuygweh #boone-element-tagline-content ul li:last-child {
+        margin-bottom: 0; }
 
 .footer {
   text-align: center;

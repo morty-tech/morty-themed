@@ -155,7 +155,7 @@ ul.tags-list {
 
   div#om-ihrbnbpzmkuygweh{
     #boone-body {
-      padding: 10px !important;
+      padding: 20px !important;
       @media screen and (min-width: $mobile-width) {
         padding: 40px !important;
       }
@@ -174,8 +174,13 @@ ul.tags-list {
         border-bottom: solid 1px rgba(0,0,0,.05);
         padding: 1.5em 0;
         margin-top: .5em;
+        margin-bottom: 2em;
         li {
           margin: 0 0 .75em 0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
