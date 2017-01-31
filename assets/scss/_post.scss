@@ -157,14 +157,14 @@ ul.tags-list {
     #boone-body {
       padding: 0 !important;
       @media screen and (min-width: $mobile-width) {
-        padding: 40px;
+        padding: 40px !important;
       }
     }
     #boone-element-title {
       font-size: 1.25em !important;
 
       @media screen and (min-width: $mobile-width) {
-        font-size: 2em;
+        font-size: 2em !important;
       }
     }
     #boone-element-tagline-content {
