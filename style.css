@@ -3372,14 +3372,14 @@ ul.tags-list {
       .optin-content div#om-ihrbnbpzmkuygweh #boone-body {
         padding: 40px !important; } }
   .optin-content div#om-ihrbnbpzmkuygweh #boone-element-title {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
     border-bottom: solid 1px rgba(0, 0, 0, 0.05);
     padding-bottom: .5em;
-    color: #555; }
+    color: #555;
+    text-transform: uppercase; }
     @media screen and (min-width: 48em) {
       .optin-content div#om-ihrbnbpzmkuygweh #boone-element-title {
         font-size: 1.5em !important;
-        text-transform: uppercase;
         padding-right: 2.5em;
         padding-left: 2.5em; } }
   .optin-content div#om-ihrbnbpzmkuygweh #boone-element-tagline-content {

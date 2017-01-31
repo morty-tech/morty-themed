@@ -160,14 +160,14 @@ ul.tags-list {
       }
     }
     #boone-element-title {
-      font-size: 1.5em !important;
+      font-size: 1.25em !important;
       border-bottom: solid 1px rgba(0,0,0,.05);
       padding-bottom: .5em;
       color: #555;
+      text-transform: uppercase;
 
       @media screen and (min-width: $tablet-width) {
         font-size: 1.5em !important;
-        text-transform: uppercase;
         padding-right: 2.5em;
         padding-left: 2.5em;
       }
