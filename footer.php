@@ -86,6 +86,9 @@
 	twq('track','PageView');
 	</script>
 	<!-- End Twitter universal website tag code -->
+
+	<!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com -->
+	<script>var om496781,om496781_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om496781_poll(function(){if(window['om_loaded']){if(!om496781){om496781=new OptinMonsterApp();return om496781.init({"s":"20568.496781","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om496781=new OptinMonsterApp();om496781.init({"s":"20568.496781","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
 <?php endif; ?>
 
 </body>
