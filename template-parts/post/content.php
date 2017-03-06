@@ -69,7 +69,7 @@
 		<div class="entry-supplements">
 			<div class="entry-supplemental-section">
 				<?php if (is_single('451')) { 
-				// this is the Home Buying Checklist post 
+				// this is the House Hunting Checklist post 
 				// We should widgetize this section and then we can use the widget settings to easily display custom widgets here as needed. 
 				?>
 
