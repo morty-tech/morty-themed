@@ -47,6 +47,7 @@
 	$( 'a.scroll-to' ).click( function(e) {
 		e.preventDefault();
 		var scrollToId = $(this).attr('href');
+		var offset = ($navigation.height() * -1) - 70;
 		$.scrollTo( $( scrollToId ), {
 			duration: 600,
 			offset: { 'top': $navigation.height() * -1 } // Account for sticky menu.
