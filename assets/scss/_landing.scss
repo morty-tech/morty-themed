@@ -86,6 +86,11 @@ a.more-link {
   .post-thumbnail{
     height: 200px;
     overflow: hidden;
+    img {
+      height: 100%;
+      width: auto;
+      max-height: inherit;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
