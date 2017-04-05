@@ -25,14 +25,13 @@
 .admin-bar .custom-header + .navigation-top.navigation-top-hide.site-navigation-fixed{
   @media screen and (min-width: $tablet-width) {
     &.navigation-top-hide.site-navigation-fixed {
-      top: 32px;
+      top: 28px;
     }
   }
 }
 
-
-
 .navigation-top {
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
   .wrap {
     @media screen and (min-width: $tablet-width) {
       max-width: none;
@@ -70,12 +69,12 @@
       li {
         a {
           padding: .5em 1.25em;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: .5px;
-          color: $blue-dark;
+          font-weight: 100;
+          font-size: 1rem;
+          color: $gray-light-5;
         }
-        &:last-child{
+
+        &:nth-child(n+2){
           @media screen and (min-width: $tablet-width) {
             float: right;
           }
@@ -105,10 +104,10 @@
       @media screen and (min-width: $tablet-width) {
         padding-top: 0;
         padding-bottom: 0;
-        margin-top: -15px;
+        margin-top: -20px;
 
         .custom-logo {
-          max-height: 50px;
+          max-height: 40px;
           margin: 0;
         }
       }
@@ -116,7 +115,7 @@
 
     .menu-top-nav-blog-description {
       color: $blue;
-      padding-top: .25em;
+      padding-top: 0;
       display: none;
       @media screen and (min-width: $tablet-width) {
         display: block;
