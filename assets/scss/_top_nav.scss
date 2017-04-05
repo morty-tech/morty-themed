@@ -66,19 +66,22 @@
     }
 
     .menu {
+      float: right;
+
       li {
         a {
-          padding: .5em 1.25em;
+          padding: .5em 1em;
           font-weight: 100;
-          font-size: 1rem;
+          font-size: .9rem;
           color: $gray-light-5;
+          font-weight: 400;
         }
 
-        &:nth-child(n+2){
-          @media screen and (min-width: $tablet-width) {
-            float: right;
-          }
-        }
+        // &:nth-child(n+2){
+        //   @media screen and (min-width: $tablet-width) {
+        //     float: right;
+        //   }
+        // }
       }
     }
   }
@@ -117,6 +120,7 @@
       color: $blue;
       padding-top: 0;
       display: none;
+      font-size: .75rem;
       @media screen and (min-width: $tablet-width) {
         display: block;
       }
