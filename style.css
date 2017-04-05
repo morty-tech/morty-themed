@@ -2804,8 +2804,8 @@ object {
     padding-bottom: 4em; }
   .navigation.pagination {
     clear: both;
-    float: right;
-    width: 70%; }
+    float: left;
+    width: 100%; }
   .has-sidebar .navigation.pagination,
   .archive.page-one-column:not(.has-sidebar) .navigation.pagination {
     float: none;
@@ -3441,12 +3441,12 @@ ul.tags-list {
         color: #c1c1c1; }
 
 .error-404 {
-  min-height: calc(100vh - 419px);
+  min-height: calc(100vh - 270px);
   margin-top: 24px;
-  padding: 8em 0 0; }
+  padding: 2em 0 1em; }
   .error-404 .error-404-image-container {
     text-align: center; }
     .error-404 .error-404-image-container .error-404-image {
-      margin-top: 2em;
+      margin: 2em 0 1em;
       max-width: 50vw;
-      max-height: 30vh; }
+      max-height: 25vh; }

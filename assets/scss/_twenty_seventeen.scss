@@ -3454,8 +3454,8 @@ object {
 
 	.navigation.pagination {
 		clear: both;
-		float: right;
-		width: $primary-width;
+		float: left;
+		width: 100%;
 	}
 
 	.has-sidebar .navigation.pagination,

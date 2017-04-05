@@ -11,6 +11,7 @@
 
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
 
+<div class="supplemental-heading">What are you looking for?</div>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label for="<?php echo $unique_id; ?>">
 		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'twentyseventeen' ); ?></span>

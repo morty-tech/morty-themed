@@ -22,6 +22,9 @@ get_header(); ?>
 						<h1 class="page-title"><?php _e( 'Oops! Look&rsquo;s like you&rsquo;re a little lost.', 'twentyseventeen' ); ?></h1>
 						<img class="error-404-image" src="<?php echo get_parent_theme_file_uri('/assets/images/space_dog.png') ?>" />
 					</div>
+
+					<?php get_search_form(); ?>
+
 				</header><!-- .page-header -->
 			</section><!-- .error-404 -->
 		</main><!-- #main -->
