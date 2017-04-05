@@ -44,6 +44,16 @@
 		}
 	});
 
+	$( 'a.scroll-to' ).click( function(e) {
+		e.preventDefault();
+		var scrollToId = $(this).attr('href');
+		var offset = ($navigation.height() * -1) - 80;
+		$.scrollTo( $( scrollToId ), {
+			duration: 600,
+			offset: { 'top': offset } // Account for sticky menu.
+		});
+	})
+
 	// Set properties of navigation.
 	function setNavProps() {
 		navigationHeight      = $navigation.height();

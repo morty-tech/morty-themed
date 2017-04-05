@@ -1,10 +1,14 @@
 .single-featured-image-header {
-  margin-top: $navbar-height;
-  max-height: 65vh;
+  // margin-top: $navbar-height;
+  height: 85vh;
   position: relative;
+  overflow: hidden;
 
   img {
-    min-width: 80%;
+    // min-width: 80%;
+    height: 100%;
+    width: auto;
+    max-width: inherit;
   }
 
   .single-featured-title {
@@ -42,7 +46,7 @@
   .site-content-contain .site-content {
     @media screen and (min-width: 48em) {
       margin-top: 0;
-      padding: 5em 0;
+      padding: 3em 0;
     }
   }
 }

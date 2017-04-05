@@ -3157,6 +3157,10 @@ a.more-link {
   .card .post-thumbnail {
     height: 200px;
     overflow: hidden; }
+    .card .post-thumbnail img {
+      height: 100%;
+      width: auto;
+      max-height: inherit; }
   @media screen and (min-width: 48em) {
     .card {
       margin-bottom: 0; }
@@ -3266,11 +3270,13 @@ a.more-link {
       display: block; } }
 
 .single-featured-image-header {
-  margin-top: 115px;
-  max-height: 65vh;
-  position: relative; }
+  height: 85vh;
+  position: relative;
+  overflow: hidden; }
   .single-featured-image-header img {
-    min-width: 80%; }
+    height: 100%;
+    width: auto;
+    max-width: inherit; }
   .single-featured-image-header .single-featured-title {
     display: none; }
     @media screen and (min-width: 30em) {
@@ -3296,7 +3302,7 @@ a.more-link {
 @media screen and (min-width: 48em) {
   .home .site-content-contain .site-content, .single-post .site-content-contain .site-content {
     margin-top: 0;
-    padding: 5em 0; } }
+    padding: 3em 0; } }
 
 .footer-posts {
   padding: 3em 1.5em 0; }
