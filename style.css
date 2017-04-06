@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@keyframes bounce {
+  from {
+    top: 0; }
+  to {
+    top: -8px; } }
+
 /*
 Theme Name: Morty <3 Blogs
 Theme URI: https://wordpress.org/themes/twentyseventeen/
@@ -2411,7 +2417,7 @@ object {
     margin-left: 1.5em; }
   /* Site Branding */
   .site-branding {
-    padding: 3em 0; }
+    padding: 0; }
   /* Front Page */
   .panel-content .wrap {
     padding-bottom: 2em;
@@ -2679,26 +2685,24 @@ object {
   /* Scroll down arrow */
   .site-header .menu-scroll-down {
     display: block;
-    padding: 1em;
-    position: absolute;
-    right: 0; }
-  .site-header .menu-scroll-down .icon {
-    -webkit-transform: rotate(90deg);
-    /* Chrome, Safari, Opera */
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    transform: rotate(90deg); }
-  .site-header .menu-scroll-down {
+    float: left;
+    margin-top: 2em;
+    padding: 1em .5em;
     color: #fff;
-    top: 2em; }
-  .site-header .navigation-top .menu-scroll-down {
-    color: #767676;
-    top: 0.7em; }
-  .menu-scroll-down:focus {
-    outline: thin dotted; }
-  .menu-scroll-down .icon {
-    height: 18px;
-    width: 18px; }
+    position: relative;
+    z-index: 9999; }
+    .site-header .menu-scroll-down:hover {
+      animation: .5s bounce forwards; }
+    .site-header .menu-scroll-down:focus {
+      outline: thin dotted; }
+    .site-header .menu-scroll-down .icon {
+      height: 30px;
+      width: 30px;
+      -webkit-transform: rotate(90deg);
+      /* Chrome, Safari, Opera */
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      transform: rotate(90deg); }
   /* Front Page */
   .twentyseventeen-front-page.has-header-image .site-branding,
   .twentyseventeen-front-page.has-header-video .site-branding,

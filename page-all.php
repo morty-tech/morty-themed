@@ -19,8 +19,11 @@
  		<main id="main" class="site-main" role="main">
 
  		<?php
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 		query_posts( array(
-			'order_by' => 'date'
+			'order_by' => 'date',
+      'paged' => $paged
 		));
  		if ( have_posts() ) : ?>
  			<?php

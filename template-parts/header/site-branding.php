@@ -21,11 +21,14 @@
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
+						<a href="#content" class="menu-scroll-down">
+							<svg class="icon icon-arrow-right" aria-hidden="true" role="img">
+							<use href="#icon-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use> </svg>
+							<span class="screen-reader-text">Scroll down to content</span>
+						</a>
 			<?php endif; ?>
 
 
 		</div><!-- .site-branding-text -->
-
-
 	</div><!-- .wrap -->
 </div><!-- .site-branding -->
