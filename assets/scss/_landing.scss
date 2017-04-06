@@ -60,6 +60,11 @@ a.more-link {
     float: left;
     margin-left: -1rem;
     margin-right: -1rem;
+    width: 100%;
+
+    @media screen and (min-width: $mobile-width) {
+      width: auto;
+    }
   }
 }
 
@@ -70,17 +75,32 @@ a.more-link {
   font-weight: 800;
   letter-spacing: 0.1818em;
   text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: $mobile-width) {
+    text-align: left;
+  }
 }
 
 .card{
   margin-bottom: 2em;
+  text-align: center;
+  @media screen and (min-width: $mobile-width) {
+    text-align: left;
+  }
 
   .entry-title {
-    font-size: 1.35em;
+    font-size: 1em;
+    @media screen and (min-width: $tablet-width) {
+      font-size: 1.35em;
+    }
   }
 
   .entry-summary {
-    font-size: 1em;
+    font-size: .85em;
+
+    @media screen and (min-width: $tablet-width) {
+      font-size: 1em;
+    }
   }
 
   .post-thumbnail{
@@ -112,7 +132,9 @@ a.more-link {
     }
 
     .entry-title {
-      font-size: 1.1em;
+      @media screen and (min-width: $tablet-width) {
+        font-size: 1.1em;
+      }
     }
   }
 
@@ -125,4 +147,14 @@ a.more-link {
 
 #primary .items article {
   padding: 1em;
+}
+
+.search-page-wrapper{
+  height: calc(100vh - #{$navbar-height} - 5em);
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-width) {
+    height: calc(100vh - #{$navbar-height} - 6.5em);
+  }
 }

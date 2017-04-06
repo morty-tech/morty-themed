@@ -1034,6 +1034,7 @@ a:hover .nav-title,
 
 .js .main-navigation.toggled-on > div > ul {
 	display: block;
+	width: 100%;
 }
 
 .main-navigation ul ul {
@@ -2910,27 +2911,20 @@ object {
 		font-size: 1rem;
 	}
 
-	/* Gallery Columns */
-
-	.gallery-item {
-		max-width: 25%;
+	.blog:not(.has-sidebar) #primary article,
+	.archive:not(.page-one-column):not(.has-sidebar) #primary article,
+	.search:not(.has-sidebar) #primary article,
+	.error404:not(.has-sidebar) #primary .page-content,
+	.error404.has-sidebar #primary .page-content,
+	body.page-two-column:not(.archive) #primary .entry-content,
+	body.page-two-column #comments,
+	#primary .items article {
+		float: left;
+		width: calc(100% / 3);
+		padding: 1em;
 	}
 
-	.gallery-columns-1 .gallery-item {
-		max-width: 100%;
-	}
 
-	.gallery-columns-2 .gallery-item {
-		max-width: 50%;
-	}
-
-	.gallery-columns-3 .gallery-item {
-		max-width: 33.33%;
-	}
-
-	.gallery-columns-4 .gallery-item {
-		max-width: 25%;
-	}
 }
 
 @media screen and (min-width: 48em) {

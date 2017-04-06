@@ -1,8 +1,12 @@
 .single-featured-image-header {
   // margin-top: $navbar-height;
-  height: 85vh;
+  height: 70vh;
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: $mobile-width) {
+    height: 85vh;
+  }
 
   img {
     // min-width: 80%;

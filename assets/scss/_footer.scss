@@ -58,6 +58,24 @@
       width: 100%;
       a {
         color: $gray-light-c;
+
+        i {
+          width: 18px;
+        }
+      }
+    }
+
+    &.footer-section--content--list--morespacing {
+      li {
+
+        + li {
+          margin-top: 1em;
+        }
+
+        address {
+          font-style: normal;
+          margin: 0;
+        }
       }
     }
   }

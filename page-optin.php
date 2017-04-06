@@ -14,7 +14,7 @@ get_header(); ?>
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	min-height: calc(100vh - 150px);
+	min-height: calc(100vh - 95px);
 }
 /*
 Specific to this page, don't move to main stylesheet

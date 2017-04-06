@@ -20,6 +20,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-57x57.png') ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_parent_theme_file_uri('/assets/images/favicons/apple-touch-icon-60x60.png') ?>">
