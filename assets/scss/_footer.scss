@@ -1,16 +1,9 @@
-.footer {
-
-  .footer-section{
-
-  }
-}
 
 .footer{
   text-align: center;
-  background: $gray-darkest;
-  color: $gray-light-c;
+  background: $brand-green;
+  color: $brand-cream;
   padding: 5rem 0;
-  font-size: $font-size-sm;
 
   @media screen and (min-width: 48em) {
     text-align: left;
@@ -57,10 +50,12 @@
       float: left;
       width: 100%;
       a {
-        color: $gray-light-c;
-
+        color: $brand-cream;
         i {
           width: 18px;
+        }
+        &:hover {
+          color: $white;
         }
       }
     }

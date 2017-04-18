@@ -3,6 +3,8 @@
   height: 70vh;
   position: relative;
   overflow: hidden;
+  background: $brand-cream-light;
+  border-color: $brand-cream-dark;
 
   @media screen and (min-width: $mobile-width) {
     height: 85vh;
@@ -29,7 +31,7 @@
 
       h1 {
         @media screen and (min-width: $tablet-width) {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: .5em;
         }
       }
@@ -102,9 +104,11 @@
         box-shadow: inset 0 0 0 transparent, 0 1px 0 black;
       }
     }
-
-
   }
+}
+
+.entry-content {
+  font-size: $font-size-base;
 }
 
 
@@ -116,7 +120,7 @@ ul.tags-list {
     float: left;
     padding-right: .5em;
     a {
-      color: $blue;
+      color: $brand-blue;
       text-transform: capitalize;
 
       &:hover{
@@ -126,7 +130,7 @@ ul.tags-list {
 
     &:after {
       content: ",";
-      color: $blue;
+      color: $brand-blue;
     }
 
     &:last-child {

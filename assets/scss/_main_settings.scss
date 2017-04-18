@@ -39,10 +39,29 @@ $brand-info: $blue-lighter;
 $brand-success: #5cb85c;
 $brand-success-dark: darken($brand-success, 20%);
 
+
+
+// Brand Colors
+$brand-cream: #f7f2eb;
+$brand-green: #2ac794;
+$brand-purple: #473366;
+$brand-blue: #4b88e6;
+$black: #000000;
+$white: #ffffff;
+
+$brand-cream-dark: darken($brand-cream, 10%);
+$brand-cream-light: lighten($brand-cream, 2.5%);
+
+$brand-primary: $brand-green;
+$blue: $brand-blue;
+
 // FONTS
-$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Gilroy", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: 'Lora', Georgia, "Times New Roman", Times, serif !default;
 $font-family-cursive: "Yellowtail", cursive;
+
+// font size
+$font-size-base: 1.3rem;
 
 // HEADINGS
 $headings-font-weight: 200;

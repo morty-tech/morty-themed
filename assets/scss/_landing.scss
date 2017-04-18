@@ -1,26 +1,66 @@
 body.has-header-image .site-description{
-  color: $blue;
   letter-spacing: -1px;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 1.2;
-  background: rgba(250,250,250,.75);
-  padding: .5em;
-
+  // background: $brand-green;
+  color: $brand-green;
+  // padding: .5em;
+  @media screen and (min-width: $mobile-width) {
+    font-size: 2.75rem;
+  }
   @media screen and (min-width: $tablet-width) {
-    font-size: 3.5rem;
-    max-width: 75%;
+    font-size: 3.1rem;
     line-height: 1;
+    margin-top: -5px;
+    color: $brand-blue;
     background: none;
-    padding: 0;
+    padding:0;
   }
 }
 
-.site-branding {
-  .site-branding-text{
-    text-align: center;
-    @media screen and (min-width: $tablet-width) {
-      text-align: left;
+.has-header-image.home.blog {
+  .custom-header-media img {
+    @media screen and (max-width: $tablet-width) {
+      top: -100px;
+    }
+  }
+
+  .site-branding {
+    bottom: inherit;
+    top: 80px;
+    vertical-align: top;
+
+    // @media screen and (min-width: $tablet-width) {
+    //   top: 60px;
+    // }
+    .site-branding-text{
+      text-align: center;
+      width: 100%;
+      #blog-brand {
+        display: none;
+        @media screen and (min-width: $mobile-width) {
+          display: inline;
+          max-width: 200px;
+        }
+
+        @media screen and (min-width: $tablet-width) {
+          display: inline;
+          max-width: 500px;
+        }
+      }
+    }
+
+    .menu-scroll-down {
+      float: none;
+      margin-top: .5em;
+      .icon {
+        fill: $brand-primary;
+      }
+
+      &:hover, &:focus {
+        ouline: none
+      }
     }
   }
 }
@@ -30,7 +70,7 @@ body.has-header-image .site-description{
 }
 
 a.more-link {
-  color: $blue;
+  color: $brand-blue;
   text-transform: uppercase;
   font-weight: 600;
   box-shadow: none;
@@ -156,6 +196,31 @@ a.more-link {
 
   @media screen and (min-width: $tablet-width) {
     height: calc(100vh - #{$navbar-height} - 6.5em);
+  }
+}
+
+#washington-field-submit {
+  background: $brand-primary !important;
+  border: none !important;
+  box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2) !important;
+  font-family: $font-family-sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+}
+
+#washington-body {
+  background: $brand-cream !important;
+
+  span, input, #washington-element-tagline-content {
+    font-family: $font-family-sans-serif !important;
+  }
+}
+
+.site-content-contain {
+  background: $brand-cream;
+
+  .entry-supplemental-section {
+    border-color: $brand-cream-dark;
   }
 }
 

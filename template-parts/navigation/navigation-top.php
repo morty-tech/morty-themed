@@ -20,7 +20,6 @@
 
 	<div class="menu-top-nav-blog-info">
 		<?php the_custom_logo(); ?>
-		<h5 class="menu-top-nav-blog-description"><?php echo get_bloginfo( 'description') ?></h5>
 	</div>
 
 </nav><!-- #site-navigation -->

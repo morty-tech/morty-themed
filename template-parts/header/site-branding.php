@@ -16,7 +16,7 @@
 		<?php endif; ?>
 		<div class="site-branding-text">
 			<?php if ( is_front_page() ) : ?>
-				<img id="blog-brand" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" />
+				<img id="blog-brand" src="<?php echo get_parent_theme_file_uri('/assets/images/mortybloglogo2.png') ?>" />
 				<?php $description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>

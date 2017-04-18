@@ -19,7 +19,7 @@
 		<footer class="footer" role="contentinfo">
 			<div class="wrap">
 				<div class="footer-section">
-					<img class="footer-logo-image" src="<?php echo get_parent_theme_file_uri('/assets/images/logo-white.png') ?>" />
+					<img class="footer-logo-image" src="<?php echo get_parent_theme_file_uri('/assets/images/mortylogo-cream.png') ?>" />
 					<div class="footer-section--content">
 						<ul class="footer-section--content--list footer-section--content--list--morespacing">
 							<li>
