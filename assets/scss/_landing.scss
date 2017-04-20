@@ -224,3 +224,15 @@ a.more-link {
   }
 }
 
+.home-pattern {
+  height: 200px;
+  background-image: url("/wp-content/themes/morty-themed/assets/images/homepattern-v1.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.error-404-image-container {
+  .home-pattern {
+    margin: 2em 0;
+  }
+}

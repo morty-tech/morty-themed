@@ -20,7 +20,7 @@ get_header(); ?>
 				<header class="page-header">
 					<div class="error-404-image-container">
 						<h1 class="page-title"><?php _e( 'Oops! Look&rsquo;s like you&rsquo;re a little lost.', 'twentyseventeen' ); ?></h1>
-						<img class="error-404-image" src="<?php echo get_parent_theme_file_uri('/assets/images/space_dog.png') ?>" />
+						<div class="home-pattern" />
 					</div>
 
 					<?php get_search_form(); ?>

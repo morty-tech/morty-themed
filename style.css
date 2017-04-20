@@ -3398,6 +3398,15 @@ a.more-link {
   .site-content-contain .entry-supplemental-section {
     border-color: #e8dac7; }
 
+.home-pattern {
+  height: 200px;
+  background-image: url("/wp-content/themes/morty-themed/assets/images/homepattern-v1.png");
+  background-size: contain;
+  background-repeat: repeat-x; }
+
+.error-404-image-container .home-pattern {
+  margin: 2em 0; }
+
 @keyframes fadeIn {
   0% {
     opacity: 0; }
