@@ -44,8 +44,8 @@
 					<h4 class="footer-section--heading">Resources</h4>
 					<div class="footer-section--content">
 						<ul class="footer-section--content--list">
-							<li><a href="https://blog.himorty.com/all">All Posts</a></li>
-							<li><a href="https://blog.himorty.com/search">Search Posts</a></li>
+							<li><a href="http://blog.himorty.com/all">All Posts</a></li>
+							<li><a href="http://blog.himorty.com/search">Search Posts</a></li>
 							<li><a href="https://www.himorty.com/how-it-works">How Morty Works</a></li>
 							<li><a href="https://www.himorty.com/signup/profile">Get Started</a></li>
 						</ul>
