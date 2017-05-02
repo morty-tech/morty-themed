@@ -554,6 +554,6 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 function is_prod() {
-	$s = strpos(get_site_url(), 'morty.co');
+	$s = strpos(get_site_url(), 'himorty.com');
 	return !empty($s);
 }
