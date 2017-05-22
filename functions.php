@@ -1,6 +1,7 @@
 <?php
 update_option('siteurl','http://blog.himorty.com');
 update_option('home','http://blog.himorty.com');
+
 /**
  * Twenty Seventeen functions and definitions
  *
@@ -399,9 +400,6 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  * Enqueue scripts and styles.
  */
 function twentyseventeen_scripts() {
-	update_option('siteurl','http://blog.himorty.com');
-	update_option('home','http://blog.himorty.com');
-
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
 
