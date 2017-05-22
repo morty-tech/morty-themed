@@ -403,6 +403,9 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  * Enqueue scripts and styles.
  */
 function twentyseventeen_scripts() {
+	define('WP_HOME','http://blog.himorty.com');
+	define('WP_SITEURL','http://blog.himorty.com');
+	
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
 
