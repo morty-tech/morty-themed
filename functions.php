@@ -1,7 +1,4 @@
 <?php
-update_option('siteurl','http://blog.himorty.com');
-update_option('home','http://blog.himorty.com');
-
 /**
  * Twenty Seventeen functions and definitions
  *
