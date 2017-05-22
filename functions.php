@@ -1,6 +1,6 @@
 <?php
-update_option('WP_HOME','http://blog.himorty.com');
-update_option('WP_SITEURL','http://blog.himorty.com');
+update_option('siteurl','http://blog.himorty.com');
+update_option('home','http://blog.himorty.com');
 /**
  * Twenty Seventeen functions and definitions
  *
