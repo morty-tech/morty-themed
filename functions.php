@@ -353,6 +353,7 @@ function archive_title($title) {
 
 add_filter( 'get_the_archive_title', 'archive_title');
 
+
 /**
  * Handles JavaScript detection.
  *
@@ -364,6 +365,12 @@ function twentyseventeen_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
+
+function hack() {
+	define('WP_HOME','http://himorty.com');
+	define('WP_SITEURL','http://himorty.com');
+}
+add_action( 'wp_head', 'hack', 1 );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
