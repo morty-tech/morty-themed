@@ -1,4 +1,6 @@
 <?php
+update_option('WP_HOME','http://blog.himorty.com');
+update_option('WP_SITEURL','http://blog.himorty.com');
 /**
  * Twenty Seventeen functions and definitions
  *
@@ -366,12 +368,6 @@ function twentyseventeen_javascript_detection() {
 }
 add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
 
-function hack() {
-	define('WP_HOME','http://blog.himorty.com');
-	define('WP_SITEURL','http://blog.himorty.com');
-}
-add_action( 'wp_head', 'hack', 1 );
-
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
@@ -403,9 +399,6 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  * Enqueue scripts and styles.
  */
 function twentyseventeen_scripts() {
-	define('WP_HOME','http://blog.himorty.com');
-	define('WP_SITEURL','http://blog.himorty.com');
-	
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
 
