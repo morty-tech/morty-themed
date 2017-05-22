@@ -367,8 +367,8 @@ function twentyseventeen_javascript_detection() {
 add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
 
 function hack() {
-	define('WP_HOME','http://himorty.com');
-	define('WP_SITEURL','http://himorty.com');
+	define('WP_HOME','http://blog.himorty.com');
+	define('WP_SITEURL','http://blog.himorty.com');
 }
 add_action( 'wp_head', 'hack', 1 );
 
