@@ -31,3 +31,7 @@ Source: http://fontawesome.io/
 Bundled header image, Copyright Alvin Engler
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://unsplash.com/@englr?photo=bIhpiQA009k
+
+== Commands ==
+
+generate css w/ `gulp scss`
