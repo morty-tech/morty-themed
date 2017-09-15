@@ -1,5 +1,11 @@
 <?php
 /**
+* Disable rest api
+**/
+add_filter('rest_enabled', '_return_false');
+add_filter('rest_jsonp_enabled', '_return_false');
+
+/**
  * Twenty Seventeen functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
