@@ -71,6 +71,7 @@
 							<li><a target="_blank" href="https://twitter.com/HiMorty"><i class="fa fa-twitter"></i> Twitter</a></li>
 							<li><a target="_blank" href="https://www.facebook.com/HiMorty/"><i class="fa fa-facebook"></i> Facebook</a></li>
 							<li><a target="_blank" href="https://www.linkedin.com/company/morty-inc."><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+							<li><a target="_blank" href="https://www.instagram.com/himortydotcom/"><i class="fa fa-instagram"></i> Instagram</a></li>
 						</ul>
 					</div>
 				</div>
