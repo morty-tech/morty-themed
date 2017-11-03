@@ -101,6 +101,7 @@ a.more-link {
     margin-left: -1rem;
     margin-right: -1rem;
     width: 100%;
+    min-width: 100%;
 
     @media screen and (min-width: $mobile-width) {
       width: auto;

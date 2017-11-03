@@ -3312,7 +3312,8 @@ a.more-link {
     float: left;
     margin-left: -1rem;
     margin-right: -1rem;
-    width: 100%; }
+    width: 100%;
+    min-width: 100%; }
     @media screen and (min-width: 30em) {
       .items .items-row {
         width: auto; } }
