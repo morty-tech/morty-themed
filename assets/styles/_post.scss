@@ -1,0 +1,68 @@
+.post {
+  margin-top: 2rem;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.post-about {
+  @extend .text-muted;
+}
+
+.post-title {
+  margin: 2rem 0 1rem;
+}
+
+.post-content {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.post-series {
+  font-size: $font-size-lg;
+  font-style: italic;
+  margin-bottom: 1rem;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-list-item {
+  margin-bottom: 1rem;
+
+  a {
+    svg {
+      width: 2.25rem;
+
+      .background {
+        fill: $white;
+      }
+
+      .icon-fill {
+        fill: $primary;
+      }
+    }
+
+    &:hover {
+      svg {
+        .background {
+          fill: $primary;
+        }
+
+        .icon-fill {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

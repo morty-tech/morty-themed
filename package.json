@@ -1,10 +1,10 @@
 {
   "name": "morty-themed",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Wordpress theme for Morty blog",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/morty-tech/morty-themed#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.5"
+    "bootstrap": "^4.0.0-alpha.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -1,0 +1,37 @@
+// Brand Colors
+$brand-cream: #f7f2eb;
+$brand-green: #2ac794;
+$brand-purple: #473366;
+$brand-blue: #4b88e6;
+$black: #000000;
+$white: #ffffff;
+
+$primary: $brand-purple;
+$body-color: $black;
+
+$font-family-sans-serif: gilroy, "Helvetica Neue", sans-serif !default;
+$font-size-2x: 2rem;
+
+$font-size-sm-px: 12px;
+$font-size-base-px: 16px;
+
+
+$display4-size: 2.5rem;
+
+$navbar-light-color:                rgba($black,.7);
+$navbar-light-hover-color:          $black;
+$navbar-light-toggler-border-color: rgba($black,.7);
+$nav-link-padding-x:                2rem;
+
+$border-radius: 1px;
+$border-radius-lg: 1px;
+$input-btn-padding-x: 2rem;
+$input-btn-padding-x-lg: 2rem;
+
+//*************************
+// Font Weights
+//*************************
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-heavy: 600;
+$font-weight-xheavy: 800;

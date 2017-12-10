@@ -1,0 +1,38 @@
+
+html {
+  font-size: $font-size-sm-px;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: $font-size-base-px;
+  }
+}
+
+.btn-light {
+  background: $white;
+  color: $primary;
+}
+
+@include media-breakpoint-down(sm) {
+  h1 {
+    font-size: $font-size-h2;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  h3 {
+    font-size: $font-size-h4;
+  }
+}
+
+.section {
+    margin: 1rem 0;
+    @include media-breakpoint-up(md) {
+      margin: 4rem 0;
+    }
+}
+
+.section-row + .section-row {
+  margin-top: 2rem;
+}

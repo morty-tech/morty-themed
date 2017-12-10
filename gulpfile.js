@@ -5,8 +5,8 @@ var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
 
 var path = {
-  SCSS_SRC: 'assets/scss/**',
-  SCSS_ORIGIN: 'assets/scss/style.scss',
+  SCSS_SRC: 'assets/styles/**',
+  SCSS_ORIGIN: 'assets/styles/style.scss',
   SCSS_OUT: './'
 };
 

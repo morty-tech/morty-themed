@@ -1,0 +1,267 @@
+$bannerHeight: 250px;
+
+$cardHeight: 250px;
+$cardHeightLg: 300px;
+
+$cardImageHeight: 150px;
+$cardImageHeightLg: 200px;
+
+$cardHeightHoriz: 100px;
+$cardHeightHorizLg: 200px;
+
+$actionCounterMargin: 3rem;
+$actionCounterMarginLg: 2.25rem;
+
+.card {
+  border: none;
+  height: $cardHeight;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: $cardHeightLg;
+  }
+
+  &.card-horizontal {
+    flex-direction: row;
+    background: transparent;
+    height: $cardHeightHoriz;
+
+    @include media-breakpoint-up(md) {
+      height: $cardHeightHorizLg;
+    }
+
+    .card-img {
+      height: $cardHeightHoriz;
+
+      @include media-breakpoint-up(md) {
+        height: $cardHeightHorizLg;
+      }
+    }
+  }
+}
+
+.card-img {
+  height: $cardImageHeight;
+
+  @include media-breakpoint-up(md) {
+    height: $cardImageHeightLg;
+  }
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  /* vertically centers the child image */
+  @extend .d-flex;
+  @extend .align-items-center;
+
+  &:hover {
+    .card-img-top {
+      opacity: .85;
+    }
+  }
+}
+
+.card-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.card-title {
+  // text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+
+  a {
+    color: $black;
+  }
+}
+
+.card-intro {
+  max-height: 70px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.featured-card {
+  .card-img {
+    position: relative;
+  }
+
+  .feature-label {
+    background: $black;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $font-weight-xheavy;
+    padding: .25rem 2rem;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+  }
+}
+
+
+
+$actionCardPadding: 1.75rem;
+.action-card, .banner-card {
+  height: auto;
+  padding: $actionCardPadding;
+  position: relative;
+  color: $primary;
+
+  @include media-breakpoint-up(md) {
+    height: $cardHeightLg;
+  }
+
+  .action-card-title, .banner-title {
+    position: absolute;
+    width: 95%;
+    left: 0;
+    top: 1rem;
+    margin:0;
+
+    /* horizontally centers the child heading block */
+    @extend .d-flex;
+    @extend .justify-content-center;
+
+    .title {
+      display: inline;
+      background: $white;
+      padding: 0 .75rem;
+      margin: 0;
+      z-index: 1;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+
+  .action-card-inner, .banner-card-inner {
+    border: solid 5px;
+    padding: .5rem 1rem;
+    height: auto;
+
+    @extend .d-flex;
+    @extend .align-items-center;
+
+    @include media-breakpoint-up(md) {
+      height: calc(#{$cardHeightLg} - 2 * #{$actionCardPadding});
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem 0;
+    font-size: $font-size-base;
+
+
+    ol {
+    	counter-reset:li; /* Initiate a counter */
+    	margin-left:0; /* Remove the default left margin */
+    	padding-left:0; /* Remove the default left padding */
+      margin-bottom: 0;
+    }
+    ol > li {
+      list-style:none; /* Disable the normal item numbering */
+    	position:relative; /* Create a positioning context */
+      margin-left: $actionCounterMargin;
+      margin-bottom: 1.5rem;
+      padding-left: .25rem;
+      line-height: 1.2;
+
+      @include media-breakpoint-up(md) {
+        margin-left: $actionCounterMarginLg;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ol > li:before {
+    	content:counter(li); /* Use the counter as content */
+    	counter-increment:li; /* Increment the counter by 1 */
+    	/* Position and style the number */
+    	position: absolute;
+    	top: 0;
+    	left: -$actionCounterMargin;
+    	font-weight:$font-weight-xheavy;
+    	text-align:center;
+      font-size: $font-size-lg;
+      width: 25px;
+      height: 25px;
+      padding-top:1px;
+      border: solid 2px;
+      border-radius: 50%;
+
+      @include media-breakpoint-up(md) {
+        width: 30px;
+        height: 30px;
+        left: -$actionCounterMarginLg;
+      }
+    }
+  }
+}
+
+.banner-card {
+  height: $bannerHeight;
+
+  .banner-card-inner {
+    height: calc(#{$bannerHeight} - 2 * #{$actionCardPadding});
+  }
+}
+
+.action-card-dark, .banner-card-dark {
+  background: $primary;
+  color: $white;
+
+  .action-card-title, .banner-title {
+    .title{
+      background: $primary;
+    }
+  }
+
+  .action-card-inner, .banner-card-inner {
+    color: $white;
+  }
+
+  a {
+    color: $white;
+
+    &.btn-light {
+      color: $primary;
+    }
+  }
+}
+
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-lg;
+  }
+}
+
+.category-list-item {
+  margin: 0;
+  padding: .5rem 0;
+
+  .item-icon {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+
+    i {
+      font-size: $display4-size;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      line-height: .5;
+    }
+  }
+}
