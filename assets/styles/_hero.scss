@@ -7,11 +7,12 @@
   /* vertically centers the child image */
   @extend .d-flex;
   @extend .align-items-center;
+
+  img {
+    @include img-fluid;
+  }
 }
 
-.hero-image {
-  @include img-fluid;
-}
 
 .hero-heading {
   position: absolute;

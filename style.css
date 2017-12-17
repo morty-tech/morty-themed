@@ -6052,10 +6052,9 @@ html {
   position: relative;
   overflow: hidden;
   /* vertically centers the child image */ }
-
-.hero-image {
-  max-width: 100%;
-  height: auto; }
+  .hero img {
+    max-width: 100%;
+    height: auto; }
 
 .hero-heading {
   position: absolute;
@@ -6253,12 +6252,9 @@ html {
       left: 0;
       line-height: .5; }
 
-.post {
-  margin-top: 2rem; }
-
 .post-header {
   text-align: center;
-  margin-bottom: 2rem; }
+  margin: 2rem 0; }
 
 .post-title {
   margin: 2rem 0 1rem; }
