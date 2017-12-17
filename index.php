@@ -16,8 +16,8 @@
  */
 
 get_header(); ?>
-
-<div class="wrap">
+index?
+<div class="wrap d-none">
 	<!--  could potentially put list of categories here -->
 
 	<?php if ( is_home() && ! is_front_page() ) : ?>
