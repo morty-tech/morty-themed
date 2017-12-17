@@ -26,32 +26,35 @@
           <h5 class="title">Next Up!</h5></div>
         <div class="action-card-inner">
           <div class="card-body">
-            <div class="card card-horizontal row">
-              <?php
-                $args = array( 'numberposts' => '1' );
-                $recent_post = wp_get_recent_posts( $args )[0];
-              ?>
-              <div class="col-6 col-md-4">
-                <?php echo '<a class="card-img" href="' . get_permalink($recent_post["ID"]) . '"><img class="card-img-top" alt="" src="' . get_the_post_thumbnail_url( $recent_post["ID"] )  . '"/></a>'; ?>
+            <?php
+              $cat_ID = get_the_category()[0]->cat_ID;
+              $the_query = new WP_Query(array(
+                  'posts_per_page' => 1,
+                  'cat' => $cat_ID,
+                  'meta_key' => '_is_ns_featured_post',
+                  'meta_value' => 'yes',
+                  'post__not_in' => array( get_the_ID() )
+              ));
 
-              </div>
-              <div class="col-6 col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <?php echo '<a href="' . get_permalink($recent_post["ID"]) . '">' .   $recent_post["post_title"].'</a>'; ?>
-                  </h4>
-                  <small class="text-muted">
-                    <?php echo get_the_date( "F j, Y", $recent_post["ID"] ); ?>
-                  </small>
-                  <p class="card-intro d-none d-md-block">
-                    <?php echo substr($recent_post["post_content"], 0, 170); ?>
-                  </p>
-                </div>
-              </div>
-              <?php
-                wp_reset_query();
-              ?>
-            </div>
+              if ( !$the_query->have_posts() ) {
+                $the_query = new WP_Query(array(
+                    'posts_per_page' => 1,
+                    'cat' => $cat_ID,
+                    'post__not_in' => array( get_the_ID() )
+                ));
+              }
+            ?>
+
+            <?php if ( $the_query->have_posts() ) : ?>
+
+            	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            		<?php get_template_part( 'card', 'horizontal' ); ?>
+            	<?php endwhile; ?>
+            	<?php wp_reset_postdata(); ?>
+
+            <?php endif; ?>
+
+
           </div>
         </div>
       </div>

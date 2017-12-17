@@ -118,10 +118,10 @@ $actionCardPadding: 1.75rem;
 
   .action-card-title, .banner-title {
     position: absolute;
-    width: 95%;
+    width: 100%;
     left: 0;
     top: 1rem;
-    margin:0;
+    margin: 0;
 
     /* horizontally centers the child heading block */
     @extend .d-flex;

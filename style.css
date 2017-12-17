@@ -6143,7 +6143,7 @@ html {
       height: 300px; } }
   .action-card .action-card-title, .action-card .banner-title, .banner-card .action-card-title, .banner-card .banner-title {
     position: absolute;
-    width: 95%;
+    width: 100%;
     left: 0;
     top: 1rem;
     margin: 0;
