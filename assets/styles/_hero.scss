@@ -1,3 +1,18 @@
+.carousel-item {
+  height: 70vh;
+
+  .carousel-image {
+    height: 70vh;
+    /* vertically centers the child image */
+    @extend .d-flex;
+    @extend .align-items-center;
+  }
+
+  img {
+    @include img-fluid;
+  }
+}
+
 .hero {
   height: 70vh;
   width: 100%;
@@ -23,10 +38,20 @@
   /* horizontally centers the child heading block */
   @extend .d-flex;
   @extend .justify-content-center;
+}
 
-  .heading {
-    display: inline;
-    background: $white;
-    padding: 1rem;
-  }
+.carousel-caption {
+  bottom: 15%;
+}
+
+.hero-heading > .heading, .carousel-caption > .caption {
+  display: inline;
+  background: $white;
+  padding: 1rem;
+  color: $black;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  height: 50px;
+  width: 50px;
 }

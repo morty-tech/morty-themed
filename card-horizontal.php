@@ -14,7 +14,7 @@
 			</h4>
 			<small class="text-muted"><?php echo get_the_date('F j, Y'); ?></small>
 			<p class="card-intro d-none d-md-block">
-				<?php the_excerpt(); ?>
+				<?php echo strip_tags(get_the_excerpt()); ?>
 			</p>
     </div>
   </div>

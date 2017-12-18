@@ -12,7 +12,7 @@
       <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h4>
     <p class="card-intro d-none d-md-block">
-			<?php the_excerpt(); ?>
+      <?php echo strip_tags(get_the_excerpt()); ?>
     </p>
   </div>
 </div>
