@@ -1,24 +1,7 @@
 <div class="section">
   <div class="row">
     <div class="col-lg-4">
-      <div class="card action-card action-card-light">
-        <div class="card-title action-card-title">
-          <h5 class="title">Great Reads</h5></div>
-        <div class="action-card-inner">
-          <div class="card-body">
-            <ol>
-              <?php
-              	$args = array( 'numberposts' => '3' );
-              	$recent_posts = wp_get_recent_posts( $args );
-              	foreach( $recent_posts as $recent ){
-              		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-              	}
-              	wp_reset_query();
-              ?>
-            </ol>
-          </div>
-        </div>
-      </div>
+      <?php get_template_part( 'addon', 'reads' ); ?>
     </div>
     <div class="col-lg-8">
       <div class="card action-card action-card-light">

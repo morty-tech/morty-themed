@@ -11,28 +11,15 @@
   <div class="section">
     <div class="row">
       <div class="col-sm-8">
-        <!-- FEATURED CARD -->
         <?php
-          $the_query = new WP_Query(array(
-              'posts_per_page' => 1,
-              'cat' => get_the_category()[0]->cat_ID,
-              'meta_key' => '_is_ns_featured_post',
-              'meta_value' => 'yes'
-          )); ?>
+          $catId = get_the_category()[0]->cat_ID;
+          include( locate_template( 'category-featured.php', false, false ) );
+        ?>
 
-        <?php if ( $the_query->have_posts() ) : ?>
-
-        	<?php while ( $the_query->have_posts() ) : $the_query->the_post();
-            $featuredId = get_the_ID(); ?>
-        		<?php get_template_part( 'card', 'featured' ); ?>
-        	<?php endwhile; ?>
-        	<?php wp_reset_postdata(); ?>
-
-        <?php endif; ?>
       </div>
 
       <div class="col-sm-4">
-        <?php get_template_part( 'card', 'cta' ); ?>
+        <?php get_template_part( 'addon', 'cta' ); ?>
       </div>
     </div>
   </div>

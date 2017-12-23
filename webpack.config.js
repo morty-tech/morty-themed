@@ -11,7 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const isOptimizedBuild = false && process.env.ENVIRONMENT_NAME !== "local";
 
 const extractCss = new ExtractTextPlugin({
-    filename: "[name].min.css",
+    filename: "../style.css",
     disable: !isOptimizedBuild
 });
 
@@ -23,9 +23,9 @@ var config = {
     },
     // Where you want the output to go
     output: {
-        path: path.join(__dirname, './dist'),
+        path: path.join(__dirname, './dist/'),
         filename: isOptimizedBuild ? '[name].min.js' : '[name].js',
-        publicPath: '/'
+        publicPath: '/dist/'
     },
     plugins: [
         // webpack gives your modules and chunks ids to identify them. Webpack can vary the
@@ -59,7 +59,7 @@ var config = {
         }),
 
         new CopyWebpackPlugin([
-          { from: 'assets/images', to: 'dist/images' },
+          { from: 'assets/images', to: 'images' },
         ])
     ],
 
@@ -94,9 +94,9 @@ var config = {
               })
           },
 
-          { test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=dist/static/[name].[ext]' },
+          { test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]' },
 
-          { test: /\.(ttf|eot|svg)(\?[a-z0-9#=&.]+)?$/, loader: 'file-loader?name=dist/static/[name].[ext]' }
+          { test: /\.(ttf|eot|svg)(\?[a-z0-9#=&.]+)?$/, loader: 'file-loader?name=fonts/[name].[ext]' }
       ]
     }
 }

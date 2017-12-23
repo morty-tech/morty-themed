@@ -7,7 +7,7 @@
   )); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
     <ol class="carousel-indicators">
       <?php $count = $the_query->post_count;
         for ($x = 0; $x < $count; $x++) { ?>
@@ -41,10 +41,114 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
   <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
+<div class="container">
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('mortgage');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
+    <div class="section-row">
+      <div class="row">
+        <div class="col-sm-8">
+          <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
+        </div>
+
+        <div class="col-sm-4">
+          <?php get_template_part( 'addon', 'series' ); ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="col-sm-8">
+        <?php get_template_part( 'addon', 'categories' ); ?>
+      </div>
+      <div class="col-sm-4">
+        <?php get_template_part( 'addon', 'reads' ); ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('money-matters');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
+    <div class="section-row">
+      <div class="row">
+        <div class="col-sm-8">
+          <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
+        </div>
+
+        <div class="col-sm-4">
+          <?php get_template_part( 'addon', 'cta' ); ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="col-12">
+        <?php get_template_part( 'addon', 'newsletter' ); ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('home-improvement');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 
 <?php get_footer(); ?>
