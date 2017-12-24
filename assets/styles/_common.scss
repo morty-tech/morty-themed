@@ -35,4 +35,8 @@ html {
 
 .section-row + .section-row {
   margin-top: 2rem;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 4rem;
+  }
 }

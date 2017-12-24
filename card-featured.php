@@ -7,10 +7,10 @@
    <label class="feature-label">Featured</label>
 	</a>
   <div class="card-body">
-    <small class="text-muted"><?php the_date(); ?></small>
-    <h4 class="card-title">
+    <small class="text-muted"><?php echo get_the_date('F j, Y'); ?></small>
+    <h5 class="card-title">
       <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </h4>
+    </h5>
     <p class="card-intro d-none d-md-block">
       <?php echo strip_tags(get_the_excerpt()); ?>
     </p>

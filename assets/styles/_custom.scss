@@ -9,12 +9,15 @@ $white: #ffffff;
 $primary: $brand-purple;
 $body-color: $black;
 
+$primary-alpha-1: rgba($primary, .1);
+$primary-light: #ecebef;
+
+
 $font-family-sans-serif: gilroy, "Helvetica Neue", sans-serif !default;
 $font-size-2x: 2rem;
 
 $font-size-sm-px: 12px;
 $font-size-base-px: 16px;
-
 
 $display4-size: 2.5rem;
 
