@@ -5,8 +5,6 @@ $searchWidth: 300px;
 $inputTransition: 200ms;
 
 .navbar {
-  border-bottom: solid 2px $black;
-
   .form-icon {
     color: $primary;
     @include media-breakpoint-up(lg) {

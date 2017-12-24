@@ -14,6 +14,14 @@
         ?>
         <a href="<?php echo esc_url(get_category_link( $cat->cat_ID )); ?>"><?php echo $cat->cat_name; ?></a> on <?php the_date(); ?></div>
         <h1 class="post-title"><?php the_title(); ?></h1>
+        <?php
+          if( has_term( '', 'series' ) ) {
+              $series = get_terms( 'series')[0];
+        ?>
+        <div class="post-series ">
+          Part of our <a href="<?php echo esc_url(get_term_link($series)); ?>"><?php echo $series->name ?></a>
+        </div>
+        <?php } ?>
     </div>
   </header>
 
@@ -29,6 +37,6 @@
     </div>
 
   <?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
-
+  <?php get_sidebar(); ?>
   </div>
 </article>

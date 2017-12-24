@@ -5,13 +5,28 @@
     <div class="card-body">
       <ol>
         <?php
-          $args = array( 'numberposts' => '3' );
-          $recent_posts = wp_get_recent_posts( $args );
-          foreach( $recent_posts as $recent ){
-            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-          }
-          wp_reset_query();
-        ?>
+          $the_query = new WP_Query(array(
+              'posts_per_page' => 3,
+              'tax_query' => array(
+              		array(
+              			'taxonomy' => 'series',
+              			'field'    => 'slug',
+              			'terms'    => 'pre-approval',
+              		),
+              ),
+              'orderby' => 'date',
+              'order'   => 'DESC'
+          )); ?>
+
+        <?php if ( $the_query->have_posts() ) : ?>
+
+        	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <li><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></li>
+        	<?php endwhile; ?>
+        	<?php wp_reset_postdata(); ?>
+
+        <?php endif; ?>
+
       </ol>
     </div>
   </div>
