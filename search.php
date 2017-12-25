@@ -1,24 +1,45 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
-</header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h2 class="entry-title"><?php _e( 'Nothing Found', 'blankslate' ); ?></h2>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
-<?php endif; ?>
-</section>
-<?php get_sidebar(); ?>
+
+  <div class="container py-2">
+    <?php if ( have_posts() ) : ?>
+      <div class="section">
+        <div class="row">
+          <div class="col-12">
+            <div class="category-heading">
+              <h4 class="category-name">
+                <?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?>
+
+              </h4>
+            </div>
+            <?php while ( have_posts() ) : the_post(); ?>
+              <div class="section-row">
+                <?php get_template_part( 'card', 'horizontal' ); ?>
+              </div>
+            <?php endwhile; ?>
+            <?php get_template_part( 'nav', 'below' ); ?>
+          </div>
+        </div>
+      </div>
+    <?php else : ?>
+      <div class="section">
+        <div class="row">
+          <div class="col-12">
+            <div class="category-heading">
+              <h4 class="category-name">
+                Nothing Found
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 mt-4">
+            <p class="mb-4">It seems we can’t find what you’re looking for. Try searching again.</p>
+            <?php get_template_part( 'search', 'container' ); ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+  </div>
+
 <?php get_footer(); ?>

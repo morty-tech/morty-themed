@@ -1,14 +1,22 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
-</section>
-<?php get_sidebar(); ?>
+
+  <div class="container py-2">
+
+      <div class="section">
+        <div class="row">
+          <div class="col-12">
+              <h4 class="text-center mb-4">
+                Oops. Looks like you're a little lost.
+              </h4>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 mt-4">
+            <?php get_template_part( 'search', 'container' ); ?>
+          </div>
+        </div>
+      </div>
+  </div>
+
 <?php get_footer(); ?>

@@ -3,7 +3,7 @@
     <h5 class="title">Pre-Approval Series</h5></div>
   <div class="action-card-inner">
     <div class="card-body">
-      <ol>
+      <ul>
         <?php
           $the_query = new WP_Query(array(
               'posts_per_page' => 3,
@@ -27,7 +27,7 @@
 
         <?php endif; ?>
 
-      </ol>
+      </ul>
     </div>
   </div>
 </div>

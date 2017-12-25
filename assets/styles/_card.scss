@@ -167,51 +167,51 @@ $actionCardPadding: 1.75rem;
     font-size: $font-size-base;
     max-height: initial;
 
-    ol {
-    	counter-reset:li; /* Initiate a counter */
-    	margin-left:0; /* Remove the default left margin */
-    	padding-left:0; /* Remove the default left padding */
-      margin-bottom: 0;
-    }
-    ol > li {
-      list-style:none; /* Disable the normal item numbering */
-    	position:relative; /* Create a positioning context */
-      margin-left: $actionCounterMargin;
-      margin-bottom: 1.5rem;
-      padding-left: .25rem;
-      line-height: 1.2;
+    // ol {
+    // 	counter-reset:li; /* Initiate a counter */
+    // 	margin-left:0; /* Remove the default left margin */
+    // 	padding-left:0; /* Remove the default left padding */
+    //   margin-bottom: 0;
+    // }
+    // ol > li {
+    //   list-style:none; /* Disable the normal item numbering */
+    // 	position:relative; /* Create a positioning context */
+    //   margin-left: $actionCounterMargin;
+    //   margin-bottom: 1.5rem;
+    //   padding-left: .25rem;
+    //   line-height: 1.2;
+    //
+    //   @include media-breakpoint-up(md) {
+    //     margin-left: $actionCounterMarginLg;
+    //   }
+    //
+    //   &:last-child {
+    //     margin-bottom: 0;
+    //   }
+    // }
 
-      @include media-breakpoint-up(md) {
-        margin-left: $actionCounterMarginLg;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    ol > li:before {
-    	content:counter(li); /* Use the counter as content */
-    	counter-increment:li; /* Increment the counter by 1 */
-    	/* Position and style the number */
-    	position: absolute;
-    	top: 3px;
-    	left: -$actionCounterMargin;
-    	font-weight:$font-weight-xheavy;
-    	text-align:center;
-      font-size: $font-size-lg;
-      width: 25px;
-      height: 25px;
-      padding-top:3px;
-      background: $primary;
-      color: $white;
-
-      @include media-breakpoint-up(md) {
-        width: 30px;
-        height: 30px;
-        left: -$actionCounterMarginLg;
-      }
-    }
+    // ol > li:before {
+    // 	content:counter(li); /* Use the counter as content */
+    // 	counter-increment:li; /* Increment the counter by 1 */
+    // 	/* Position and style the number */
+    // 	position: absolute;
+    // 	top: 3px;
+    // 	left: -$actionCounterMargin;
+    // 	font-weight:$font-weight-xheavy;
+    // 	text-align:center;
+    //   font-size: $font-size-lg;
+    //   width: 25px;
+    //   height: 25px;
+    //   padding-top:3px;
+    //   background: $primary;
+    //   color: $white;
+    //
+    //   @include media-breakpoint-up(md) {
+    //     width: 30px;
+    //     height: 30px;
+    //     left: -$actionCounterMarginLg;
+    //   }
+    // }
   }
 }
 
@@ -247,7 +247,7 @@ $actionCardPadding: 1.75rem;
 
   .card-body {
     ol > li:before {
-      background: rgba($white, .25);
+      // background: rgba($white, .25);
     }
   }
 }
@@ -264,14 +264,20 @@ $actionCardPadding: 1.75rem;
 
 .category-list-item {
   margin: 0;
-  padding: .5rem 0;
+  padding: .65rem 0;
+
+  a {
+    font-size: $font-size-base;
+    text-transform: uppercase;
+  }
 
   .item-icon {
     width: 40px;
-    height: 30px;
+    height: 40px;
     position: relative;
     display: inline-block;
     margin-right: 1rem;
+    color: $black;
 
     i {
       font-size: $display4-size;
@@ -279,6 +285,27 @@ $actionCardPadding: 1.75rem;
       bottom: 0;
       left: 0;
       line-height: .5;
+    }
+  }
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  padding-left: 3rem;
+  margin-bottom: 0;
+  
+  li {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 2px;
+      left: -2rem;
+    }
+
+    + li {
+      margin-top: 1rem;
     }
   }
 }

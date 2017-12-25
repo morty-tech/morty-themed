@@ -48,17 +48,8 @@
               <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo2x.png') ?>" alt="Morty Blog" />
             </a>
           </div>
-          <div class="col-4 d-lg-flex justify-content-end">
-            <form class="form-inline my-2 my-lg-0">
-              <i class="material-icons form-icon">search</i>
-              <div class="navbar-search">
-                <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
-                <div class="search-border"></div>
-              </div>
-              <div class="d-none">
-                <?php get_search_form(); ?>
-              </div>
-            </form>
+          <div class="col-4 col-lg-3 offset-lg-1 justify-content-end">
+            <?php get_search_form(); ?>
           </div>
         </div>
       </div>
