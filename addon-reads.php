@@ -8,7 +8,7 @@
           $args = array( 'numberposts' => '3' );
           $recent_posts = wp_get_recent_posts( $args );
           foreach( $recent_posts as $recent ){
-            echo '<li><i class="material-icons">done</i><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+            echo '<li><a href="' . get_permalink($recent["ID"]) . '">' . $recent["post_title"].'</a> </li> ';
           }
           wp_reset_query();
         ?>

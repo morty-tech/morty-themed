@@ -18,7 +18,7 @@
           <ul class="category-list pl-md-4">
             <li class="category-list-item">
               <div class="item-icon">
-                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/012-mortgage.svg') ?>">
+                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/018-mortgage.svg') ?>">
               </div>
               <a
                 href="<?php echo esc_url(get_category_link( $catMorgage->cat_ID )); ?>">
@@ -27,7 +27,7 @@
             </li>
             <li class="category-list-item">
               <div class="item-icon">
-                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/003-atm.svg') ?>">
+                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/009-atm.svg') ?>">
               </div>
               <a
                 href="<?php echo esc_url(get_category_link( $catMoney->cat_ID )); ?>">
@@ -35,7 +35,7 @@
               </a>
             <li class="category-list-item">
               <div class="item-icon">
-                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/005-light-bulb.svg') ?>">
+                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/011-light-bulb.svg') ?>">
               </div>
               <a
                 href="<?php echo esc_url(get_category_link( $catTips->cat_ID )); ?>">
@@ -47,7 +47,7 @@
           <ul class="category-list pr-4">
             <li class="category-list-item">
               <div class="item-icon">
-                <img alt="paint roller" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/008-paint-roller.svg') ?>">
+                <img alt="paint roller" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/014-paint-roller.svg') ?>">
               </div>
               <a
                 href="<?php echo esc_url(get_category_link( $catHome->cat_ID )); ?>">
@@ -56,7 +56,7 @@
             </li>
             <li class="category-list-item">
               <div class="item-icon">
-                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/011-for-sale.svg') ?>">
+                <img alt="selling your home" src="<?php echo get_parent_theme_file_uri('/assets/images/svg/017-for-sale.svg') ?>">
               </div>
               <a
                 href="<?php echo esc_url(get_category_link( $catSelling->cat_ID )); ?>">

@@ -37,6 +37,5 @@
     </div>
 
   <?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
-  <?php get_sidebar(); ?>
   </div>
 </article>
