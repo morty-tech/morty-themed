@@ -43,4 +43,7 @@ $carousel-control-color: $black;
 $carousel-indicator-active-bg: $black;
 
 $carousel-control-opacity: .75;
-$carousel-control-icon-width: 30px;
+$carousel-control-icon-width: 40px;
+
+$carousel-control-prev-icon-bg: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.9 88.2" style="enable-background:new 0 0 51.9 88.2;" xml:space="preserve"><g><path d="M5,44.1L44.2,4.9L47,7.7L10.7,44.1L47,80.4l-2.8,2.8L5,44.1z M44.2,4.9L47,7.7"/><polygon points="44.2,0 51.9,7.7 15.6,44.1 51.9,80.4 44.2,88.2 0,44.2 	"/></g></svg>');
+$carousel-control-next-icon-bg: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.903 88.196" style="enable-background:new 0 0 51.903 88.196;" xml:space="preserve"><g><path d="M46.95,44.047l-39.2,39.2l-2.8-2.8l36.3-36.4l-36.3-36.3l2.8-2.8L46.95,44.047z M7.75,83.247l-2.8-2.8"></path><polygon points="7.75,88.196 0.003,80.451 36.303,44.05 0,7.747 7.747,0 51.903,44.044"></polygon></g></svg>');
