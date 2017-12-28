@@ -17,9 +17,6 @@
   </head>
 
 <body <?php body_class(); ?>>
-
-<div id="wrapper" class="hfeed">
-
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="d-lg-none w-100 d-flex justify-content-between">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,5 +52,3 @@
       </div>
     </div>
   </nav>
-
-<div>

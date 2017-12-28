@@ -8,15 +8,15 @@ const StatsPlugin = require('stats-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //setting this variable here, and not in env vars, allows for local testing
-const isOptimizedBuild = false && process.env.ENVIRONMENT_NAME !== "local";
+const isProd = true;
 
 const extractCss = new ExtractTextPlugin({
     filename: "../style.css",
-    disable: !isOptimizedBuild
+    disable: isProd
 });
 
 var config = {
-    watch: true,
+    watch: !isProd,
     // The entry file. All your app roots fromn here.
     entry: {
       'index': path.join(__dirname, 'assets/scripts/index.js')
@@ -24,8 +24,8 @@ var config = {
     // Where you want the output to go
     output: {
         path: path.join(__dirname, './dist/'),
-        filename: isOptimizedBuild ? '[name].min.js' : '[name].js',
-        publicPath: '/dist/'
+        filename: '[name].js',
+        publicPath: '/wp-content/themes/morty-themed/dist/'
     },
     plugins: [
         // webpack gives your modules and chunks ids to identify them. Webpack can vary the
@@ -54,7 +54,7 @@ var config = {
         // need NODE_ENV to be `production` for react to use prod version
         new webpack.DefinePlugin({
             'process.env' : {
-              'IS_PROD'          : JSON.stringify(process.env.IS_PROD)
+              'IS_PROD' : isProd
             },
         }),
 
@@ -82,7 +82,7 @@ var config = {
                   use: [{
                       loader: "css-loader",
                       options: {
-                        minimize: isOptimizedBuild
+                        minimize: isProd
                       }
                   }, {
                       loader: "postcss-loader"
@@ -101,16 +101,16 @@ var config = {
     }
 }
 
-if (isOptimizedBuild) {
-  config.plugins.push(
-    // handles uglifying js
-    new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-            warnings: false,
-            screw_ie8: true
-        }
-    })
-  )
-}
+// if (isOptimizedBuild) {
+//   config.plugins.push(
+//     // handles uglifying js
+//     new webpack.optimize.UglifyJsPlugin({
+//         compressor: {
+//             warnings: false,
+//             screw_ie8: true
+//         }
+//     })
+//   )
+// }
 
 module.exports = config;
