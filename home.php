@@ -35,7 +35,7 @@ get_header(); ?>
 
 				foreach ( $exclude_cat_slugs as $slug ) {
 					$c = get_category_by_slug( $slug );
-					if (c) {
+					if ($c) {
 						$exclude_cat_ids[] = $c->term_id;
 					}
 				}
