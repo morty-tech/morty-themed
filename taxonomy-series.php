@@ -62,6 +62,7 @@
               <?php get_template_part( 'card', 'horizontal' ); ?>
             </div>
         	<?php endwhile; ?>
+          <?php get_template_part( 'nav', 'below' ); ?>
         	<?php wp_reset_postdata(); ?>
 
         <?php endif; ?>
