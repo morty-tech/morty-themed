@@ -33,8 +33,10 @@
 
         <!-- EVERYTHING BUT THE FEATURED CARD -->
         <?php
+          $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
           $the_query = new WP_Query(array(
               'posts_per_page' => 10,
+              'paged' => $paged,
               'cat' => get_the_category()[0]->cat_ID,
               'post__not_in' => array( $featuredId )
           )); ?>
@@ -46,8 +48,10 @@
               <?php get_template_part( 'card', 'horizontal' ); ?>
             </div>
         	<?php endwhile; ?>
+          
+          <?php get_template_part( 'nav', 'below' ); ?>
+          
         	<?php wp_reset_postdata(); ?>
-
         <?php endif; ?>
 
       </div>

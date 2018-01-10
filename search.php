@@ -8,7 +8,6 @@
             <div class="category-heading">
               <h4 class="category-name">
                 <?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?>
-
               </h4>
             </div>
             <?php while ( have_posts() ) : the_post(); ?>

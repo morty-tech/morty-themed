@@ -41,10 +41,12 @@
       width: 2.25rem;
 
       .background {
+        transition: fill .25s ease;
         fill: $white;
       }
 
       .icon-fill {
+        transition: fill .25s ease;
         fill: $primary;
       }
     }

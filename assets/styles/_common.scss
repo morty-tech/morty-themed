@@ -39,3 +39,40 @@ html {
     margin-top: 4rem;
   }
 }
+
+.screen-reader-text {
+  display: none;
+}
+
+.pagination {
+  margin-top: 1rem;
+  
+  .nav-links {
+    width: 100%;
+    text-align:center;
+  }
+  
+  .page-numbers {
+    margin: 0 .5rem;
+    
+    &.prev, &.next {
+      background: $gray-100;
+      padding: .5rem;
+      margin: 0 1rem;
+      
+      &:hover {
+        background: $gray-400;
+      }
+    }
+    
+    &.current {
+      font-weight: $font-weight-heavy;
+      border-bottom: 2px solid;
+    }
+  }
+
+  .pagination-arrow {
+    width: .75rem;
+    height: .75rem;
+  }
+}
