@@ -46,9 +46,6 @@
                   <a href="https://blog.morty.com/all">All Posts</a>
                 </li>
                 <li class="footer-links-item">
-                  <a href="https://blog.morty.com/search">Search Posts</a>
-                </li>
-                <li class="footer-links-item">
                   <a href="https://www.himorty.com/how-it-works">How Morty Works</a>
                 </li>
                 <li class="footer-links-item">
