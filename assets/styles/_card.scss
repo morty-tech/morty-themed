@@ -248,41 +248,6 @@ $actionCardPadding: 1.75rem;
   }
 }
 
-//optin
-#om-hpogfvcg5knjlp7n-holder {
-  #washington-header, #washington-content {
-    display: none !important;
-  }
-  
-  .washington-form-wrap {
-    display: flex !important;
-    flex-flow: row !important;
-    align-items: center !important;
-    
-    #washington-field-email {
-      width: auto !important;
-      display: inline-block !important;
-      vertical-align: middle !important;
-      padding: .5rem 2rem !important;
-      font-size: 1.25rem !important;
-    }
-    
-    #washington-field-submit {
-      background: $primary  !important;
-      border-color: $primary !important;
-      padding: .5rem 2rem !important;
-      font-size: 1.25rem !important;
-      width: auto !important;
-      
-      @extend .ml-md-2;
-      @extend .mt-2;
-      @extend .mt-md-0;
-    }
-  }
-}
-
-
-
 .category-list {
   list-style: none;
   margin: 0;

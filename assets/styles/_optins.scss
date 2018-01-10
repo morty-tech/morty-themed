@@ -1,0 +1,50 @@
+.optin-content {
+  background: $gray-100;
+  padding: 2rem;
+  
+  ul {
+    list-style: none !important;
+    margin: 2rem 0 !important;
+    padding: 0 !important;
+    
+    li {
+      padding: 1rem 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+//newsletter optin
+#om-hpogfvcg5knjlp7n-holder {
+  #washington-header, #washington-content {
+    display: none !important;
+  }
+  
+  .washington-form-wrap {
+    display: flex !important;
+    flex-flow: row !important;
+    justify-content: center !important;
+    
+    #washington-field-email {
+      width: auto !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
+      margin-bottom: 0 !important;
+    }
+    
+    #washington-field-submit {
+      background: $primary  !important;
+      border-color: $primary !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
+      width: auto !important;
+      
+      @extend .ml-md-2;
+      @extend .mt-2;
+      @extend .mt-md-0;
+    }
+  }
+}
+

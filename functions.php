@@ -25,10 +25,10 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/index.js', array (), 1.1, true);
 
-function wpmix_display_globals($content) {
-	return $content . var_export($GLOBALS['post'], TRUE);
-}
-add_filter('the_content', 'wpmix_display_globals');
+// function wpmix_display_globals($content) {
+// 	return $content . var_export($GLOBALS['post'], TRUE);
+// }
+// add_filter('the_content', 'wpmix_display_globals');
 
 function is_prod() {
 	$s = strpos(get_site_url(), 'himorty.com');
