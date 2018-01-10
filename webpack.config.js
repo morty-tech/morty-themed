@@ -12,7 +12,7 @@ const isProd = true;
 
 const extractCss = new ExtractTextPlugin({
     filename: "../style.css",
-    disable: isProd
+    disable: !isProd
 });
 
 var config = {
