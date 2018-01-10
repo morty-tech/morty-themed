@@ -257,16 +257,26 @@ $actionCardPadding: 1.75rem;
   .washington-form-wrap {
     display: flex !important;
     flex-flow: row !important;
+    align-items: center !important;
     
     #washington-field-email {
-        @extend .form-control;
-        @extend .form-control-lg;
+      width: auto !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
     }
     
     #washington-field-submit {
-      @extend .btn;
-      @extend .btn-primary;
-      @extend .btn-lg;
+      background: $primary  !important;
+      border-color: $primary !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
+      width: auto !important;
+      
+      @extend .ml-md-2;
+      @extend .mt-2;
+      @extend .mt-md-0;
     }
   }
 }
