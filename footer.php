@@ -6,7 +6,7 @@
         <div class="banner-card-inner">
           <div class="card-body">
             <div class="text-center">
-              <a href="#" class="btn btn-light btn-lg">See Your Loan Options</a>
+              <a href="https://www.himorty.com/onboarding" class="btn btn-light btn-lg">See Your Loan Options</a>
             </div>
           </div>
         </div>
