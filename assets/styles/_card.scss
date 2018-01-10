@@ -248,6 +248,31 @@ $actionCardPadding: 1.75rem;
   }
 }
 
+//optin
+#om-hpogfvcg5knjlp7n-holder {
+  #washington-header, #washington-content {
+    display: none !important;
+  }
+  
+  .washington-form-wrap {
+    display: flex !important;
+    flex-flow: row !important;
+    
+    #washington-field-email {
+        @extend .form-control;
+        @extend .form-control-lg;
+    }
+    
+    #washington-field-submit {
+      @extend .btn;
+      @extend .btn-primary;
+      @extend .btn-lg;
+    }
+  }
+}
+
+
+
 .category-list {
   list-style: none;
   margin: 0;
