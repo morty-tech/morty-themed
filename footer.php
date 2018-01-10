@@ -40,7 +40,7 @@
               <h5>Resources</h5>
               <ul class="footer-links">
                 <li class="footer-links-item">
-                  <a href="https://blog.morty.com/pre-approval">Pre-Approval Series</a>
+                  <a href="https://blog.morty.com/series/pre-approval">Pre-Approval Series</a>
                 </li>
                 <li class="footer-links-item">
                   <a href="https://blog.morty.com/all">All Posts</a>
@@ -92,7 +92,7 @@
         </div>
       </div>
     </footer>
-    
+
     <?php if ( is_prod() ) : ?>
     	<!-- GA -->
     	<script>
