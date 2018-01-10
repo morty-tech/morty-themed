@@ -1,6 +1,6 @@
 
 <?php
-  $catMorgage = get_category_by_slug('mortgage');
+  $catMorgage = get_category_by_slug('mortgage-101');
   $catMoney = get_category_by_slug('money-matters');
   $catHome = get_category_by_slug('home-improvement');
   $catTips = get_category_by_slug('tips-tricks');

@@ -1,5 +1,11 @@
+.optin-title {
+  color: $primary;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .optin-content {
-  background: $gray-100;
+  background: $primary;
   padding: 2rem;
   
   ul {
@@ -8,7 +14,7 @@
     padding: 0 !important;
     
     li {
-      padding: 1rem 0 !important;
+      padding: .5rem 0 !important;
       margin: 0 !important;
     }
   }
@@ -20,6 +26,10 @@
     display: none !important;
   }
   
+  #washington-body {
+    padding: 0 !important;
+  }
+  
   .washington-form-wrap {
     display: flex !important;
     flex-flow: row !important;
@@ -27,6 +37,7 @@
     
     #washington-field-email {
       width: auto !important;
+      height: auto !important;
       display: inline-block !important;
       vertical-align: middle !important;
       padding: .5rem 2rem !important;
@@ -40,10 +51,16 @@
       padding: .5rem 2rem !important;
       font-size: 1.25rem !important;
       width: auto !important;
+      height: auto !important;
       
       @extend .ml-md-2;
       @extend .mt-2;
       @extend .mt-md-0;
+    }
+    
+    .washington-error {
+      position: absolute !important;
+      bottom: -15px;
     }
   }
 }

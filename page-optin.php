@@ -7,6 +7,7 @@
           <div class="col-12">
 
             <?php while ( have_posts() ) : the_post(); ?>
+              <h1 class="optin-title"><?php the_title(); ?></h1>
               <div class="optin-content">
     						<?php the_content(); ?>
     					</div>
