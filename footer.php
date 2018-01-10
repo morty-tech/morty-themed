@@ -40,10 +40,10 @@
               <h5>Resources</h5>
               <ul class="footer-links">
                 <li class="footer-links-item">
-                  <a href="https://blog.morty.com/series/pre-approval">Pre-Approval Series</a>
+                  <a href="https://blog.himorty.com/series/pre-approval">Pre-Approval Series</a>
                 </li>
                 <li class="footer-links-item">
-                  <a href="https://blog.morty.com/all">All Posts</a>
+                  <a href="https://blog.himorty.com/all">All Posts</a>
                 </li>
                 <li class="footer-links-item">
                   <a href="https://www.himorty.com/how-it-works">How Morty Works</a>
