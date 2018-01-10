@@ -47,7 +47,7 @@
 <div class="container">
   <div class="section">
     <?php
-      $cat = get_category_by_slug('mortgage');
+      $cat = get_category_by_slug('mortgage-101');
       $catId = $cat->cat_ID;
     ?>
     <div class="row">
