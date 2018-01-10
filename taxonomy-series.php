@@ -12,10 +12,15 @@
     <div class="row">
       <div class="col-sm-8">
         <?php
-          $catId = get_the_category()[0]->cat_ID;
           $the_query = new WP_Query(array(
               'posts_per_page' => 1,
-              'cat' => $catId,
+              'tax_query' => array(
+              		array(
+              			'taxonomy' => 'series',
+              			'field'    => 'slug',
+              			'terms'    => 'pre-approval',
+              		),
+              ),
               'orderby' => 'date',
             	'order'   => 'DESC',
           )); ?>
@@ -49,8 +54,14 @@
         <?php
           $the_query = new WP_Query(array(
               'posts_per_page' => 10,
-              'cat' => get_the_category()[0]->cat_ID,
               'post__not_in' => array( $featuredId ),
+              'tax_query' => array(
+                  array(
+                    'taxonomy' => 'series',
+                    'field'    => 'slug',
+                    'terms'    => 'pre-approval',
+                  ),
+              ),
               'orderby' => 'date',
               'order'   => 'DESC'
           )); ?>
