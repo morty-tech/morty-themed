@@ -35,15 +35,8 @@
     flex-flow: row !important;
     justify-content: center !important;
 
-    @include media-breakpoint-down(sm) {
-      display: block !important;
-    }
-
     #washington-field-email {
-      @include media-breakpoint-up(md) {
-        width: auto !important;
-      }
-
+      width: auto !important;
       height: auto !important;
       display: inline-block !important;
       vertical-align: middle !important;
@@ -53,14 +46,11 @@
     }
 
     #washington-field-submit {
-      @include media-breakpoint-up(md) {
-        width: auto !important;
-      }
-
       background: $primary  !important;
       border-color: $primary !important;
       padding: .5rem 2rem !important;
       font-size: 1.25rem !important;
+      width: auto !important;
       height: auto !important;
 
       @extend .ml-md-2;
