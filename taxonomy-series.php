@@ -10,7 +10,7 @@
 <div class="container">
   <div class="section">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-md-8">
         <?php
           $the_query = new WP_Query(array(
               'posts_per_page' => 1,
@@ -37,7 +37,7 @@
         <?php endif; ?>
       </div>
 
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <?php get_template_part( 'addon', 'cta' ); ?>
       </div>
     </div>

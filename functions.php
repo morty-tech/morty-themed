@@ -34,9 +34,3 @@ function is_prod() {
 	$s = strpos(get_site_url(), 'himorty.com');
 	return !empty($s);
 }
-
-add_theme_support('post-thumbnails', array(
-'post',
-'page',
-'custom-post-type-name',
-));

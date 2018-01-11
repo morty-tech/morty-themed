@@ -57,11 +57,11 @@
     </div>
     <div class="section-row">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-md-8">
           <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <?php get_template_part( 'addon', 'series' ); ?>
         </div>
       </div>
@@ -78,10 +78,10 @@
 
   <div class="section">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-md-8">
         <?php get_template_part( 'addon', 'categories' ); ?>
       </div>
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <?php get_template_part( 'addon', 'reads' ); ?>
       </div>
     </div>
@@ -99,11 +99,11 @@
     </div>
     <div class="section-row">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-md-8">
           <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <?php get_template_part( 'addon', 'cta' ); ?>
         </div>
       </div>

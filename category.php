@@ -10,7 +10,7 @@
 <div class="container">
   <div class="section">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-md-8">
         <?php
           $catId = get_the_category()[0]->cat_ID;
           include( locate_template( 'category-featured.php', false, false ) );
@@ -18,7 +18,7 @@
 
       </div>
 
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <?php get_template_part( 'addon', 'cta' ); ?>
       </div>
     </div>
@@ -48,9 +48,9 @@
               <?php get_template_part( 'card', 'horizontal' ); ?>
             </div>
         	<?php endwhile; ?>
-          
+
           <?php get_template_part( 'nav', 'below' ); ?>
-          
+
         	<?php wp_reset_postdata(); ?>
         <?php endif; ?>
 
