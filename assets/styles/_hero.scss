@@ -14,10 +14,13 @@
 }
 
 .hero {
-  height: 70vh;
   width: 100%;
   position: relative;
   overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: 70vh;
+  }
 
   /* vertically centers the child image */
   @extend .d-flex;
@@ -45,13 +48,12 @@
 }
 
 .hero-heading > .heading, .carousel-caption > .caption {
-  display: inline;
   background: $white;
   padding: 1rem;
   color: $black;
-}
+  line-height: 1.5;
 
-// .carousel-control-next-icon, .carousel-control-prev-icon {
-//   height: 50px;
-//   width: 50px;
-// }
+  p {
+    margin-bottom: 0;
+  }
+}

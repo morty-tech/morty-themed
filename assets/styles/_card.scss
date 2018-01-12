@@ -294,6 +294,11 @@ $actionCardPadding: 1.75rem;
     position: relative;
     font-size: $font-size-sm;
 
+    @include media-breakpoint-up(md) {
+      max-height: 60px;
+      overflow: hidden;
+    }
+
     + li {
       margin-top: .85rem;
       padding-top: .85rem;

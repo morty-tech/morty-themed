@@ -29,7 +29,7 @@
     	/></noscript>
     	<!-- End Facebook Pixel Code -->
     <?php endif; ?>
-    
+
     <?php wp_head(); ?>
   </head>
 
@@ -40,7 +40,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a href="/">
-        <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo2x.png') ?>" alt="Morty Blog" />
+        <img class="navbar-brandimage self-align-center" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo2x.png') ?>" alt="Morty Blog" />
       </a>
     </div>
 
