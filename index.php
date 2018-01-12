@@ -8,7 +8,7 @@
 
 <?php if ( $the_query->have_posts() ) : ?>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators d-none d-md-flex">
       <?php $count = $the_query->post_count;
         for ($x = 0; $x < $count; $x++) { ?>
           <li data-target="#carouselExampleIndicators"
@@ -24,7 +24,7 @@
             <img class="d-block w-100"
               src="<?php the_post_thumbnail_url(); ?>"/>
           </div>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <h2 class="caption"><a href="<?php the_permalink(); ?>">
                 <?php the_title(); ?></a></h2>
           </div>

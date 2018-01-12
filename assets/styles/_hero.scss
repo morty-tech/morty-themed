@@ -1,8 +1,13 @@
 .carousel-item {
-  height: 70vh;
+  // height: 70vh;
 
   .carousel-image {
-    height: 70vh;
+    height: 350px;
+
+    @include media-breakpoint-up(md) {
+      height: 70vh;
+    }
+
     /* vertically centers the child image */
     @extend .d-flex;
     @extend .align-items-center;
