@@ -12,13 +12,14 @@
     <div class="row">
       <div class="col-md-8">
         <?php
+          $term = get_query_var( 'term' );
           $the_query = new WP_Query(array(
               'posts_per_page' => 1,
               'tax_query' => array(
               		array(
               			'taxonomy' => 'series',
               			'field'    => 'slug',
-              			'terms'    => 'pre-approval',
+              			'terms'    => $term,
               		),
               ),
               'orderby' => 'date',
@@ -59,7 +60,7 @@
                   array(
                     'taxonomy' => 'series',
                     'field'    => 'slug',
-                    'terms'    => 'pre-approval',
+                    'terms'    => $term,
                   ),
               ),
               'orderby' => 'date',
