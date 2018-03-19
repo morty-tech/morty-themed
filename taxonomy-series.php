@@ -22,8 +22,8 @@
               			'terms'    => $term,
               		),
               ),
-              'orderby' => 'date',
-            	'order'   => 'DESC',
+              'meta_key' => '_is_ns_featured_post',
+              'meta_value' => 'yes',
           )); ?>
 
         <?php if ( $the_query->have_posts() ) : ?>
