@@ -1,34 +1,22 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+  <div class="container py-2">
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+      <div class="section">
+        <div class="row">
+          <div class="col-12">
+              <h4 class="text-center mb-4">
+                Oops. Looks like you're a little lost.
+              </h4>
+          </div>
+        </div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<div class="error-404-image-container">
-						<h1 class="page-title"><?php _e( 'Oops! Look&rsquo;s like you&rsquo;re a little lost.', 'twentyseventeen' ); ?></h1>
-						<div class="home-pattern" />
-					</div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 mt-4">
+            <?php get_template_part( 'search', 'container' ); ?>
+          </div>
+        </div>
+      </div>
+  </div>
 
-					<?php get_search_form(); ?>
-
-				</header><!-- .page-header -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
-
-<?php get_footer();
+<?php get_footer(); ?>

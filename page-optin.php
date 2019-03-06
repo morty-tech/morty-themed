@@ -1,48 +1,22 @@
-<?php
-/**
- * Template Name: Optin
- */
+<?php get_header(); ?>
 
+  <div class="container py-2">
+    <?php if ( have_posts() ) : ?>
+      <div class="section">
+        <div class="row">
+          <div class="col-12">
 
-$background = wp_get_attachment_image_src( get_post_thumbnail_id( $page->ID ), 'full' );
-get_header(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+              <h1 class="optin-title"><?php the_title(); ?></h1>
+              <div class="optin-content">
+    						<?php the_content(); ?>
+    					</div>
+            <?php endwhile; ?>
 
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+  </div>
 
-<style>
-#content {
-	background: url(<?php echo $background[0]; ?>);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	min-height: calc(100vh - 95px);
-}
-/*
-Specific to this page, don't move to main stylesheet
-*/
-.single-featured-title	{
-	display:none;
-}
-</style>
-
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php // Start the loop
-			while ( have_posts() ) : the_post();?>
-
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<div class="optin-content">
-						<?php the_content(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-## -->
-
-
-			<?php endwhile; // End the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
-
-<?php get_footer();
+<?php get_footer(); ?>

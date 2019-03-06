@@ -1,0 +1,8 @@
+
+.category-heading {
+  margin-bottom: 1rem;
+  border-bottom: solid 1px $black;
+
+  @extend .d-flex;
+  @extend .justify-content-between;
+}

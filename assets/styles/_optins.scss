@@ -1,0 +1,78 @@
+.optin-title {
+  color: $primary;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.optin-content {
+  background: $primary;
+  padding: 2rem;
+
+  ul {
+    list-style: none !important;
+    margin: 2rem 0 !important;
+    padding: 0 !important;
+
+    li {
+      padding: .5rem 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+//newsletter optin
+#om-hpogfvcg5knjlp7n-holder {
+  #washington-header, #washington-content {
+    display: none !important;
+  }
+
+  #washington-body {
+    padding: 0 !important;
+    height: auto !important;
+  }
+
+  .washington-form-wrap {
+    display: flex !important;
+    flex-flow: row !important;
+    justify-content: center !important;
+
+    @include media-breakpoint-down(sm) {
+      display: block !important;
+    }
+
+    #washington-field-email {
+      @include media-breakpoint-up(md) {
+        width: auto !important;
+      }
+
+      height: auto !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    #washington-field-submit {
+      @include media-breakpoint-up(md) {
+        width: auto !important;
+      }
+
+      background: $primary  !important;
+      border-color: $primary !important;
+      padding: .5rem 2rem !important;
+      font-size: 1.25rem !important;
+      height: auto !important;
+
+      @extend .ml-md-2;
+      @extend .mt-2;
+      @extend .mt-md-0;
+    }
+
+    .washington-error {
+      position: absolute !important;
+      bottom: -15px;
+    }
+  }
+}
+

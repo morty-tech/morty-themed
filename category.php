@@ -1,72 +1,63 @@
-<?php
-/**
- * The template for displaying category pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php get_header(); ?>
+<div class="hero">
+  <img class="hero-image" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url(); ?>" alt="">
+  <div class="hero-heading">
+    <h1 class="heading">
+      <?php if (category_description()) echo category_description(); else echo single_cat_title();?></h1>
+  </div>
+</div>
 
-get_header(); ?>
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col-md-8">
+        <?php
+          $catId = get_the_category()[0]->cat_ID;
+          include( locate_template( 'category-featured.php', false, false ) );
+        ?>
 
-<div class="wrap">
+      </div>
 
-	<?php if ( have_posts() ) : ?>
-		<header class="page-header category-header">
-			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-		</header><!-- .page-header -->
-	<?php endif; ?>
+      <div class="col-md-4">
+        <?php get_template_part( 'addon', 'cta' ); ?>
+      </div>
+    </div>
+  </div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div class="section">
+    <div class="row">
+      <div class="col-12">
+        <div class="category-heading">
+          <h4 class="category-name">Most Recent Articles</h4>
+        </div>
 
-		<?php
-		if ( have_posts() ) : ?>
-			<?php
-			/* Start the Loop */
+        <!-- EVERYTHING BUT THE FEATURED CARD -->
+        <?php
+          $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+          $the_query = new WP_Query(array(
+              'posts_per_page' => 10,
+              'paged' => $paged,
+              'cat' => get_the_category()[0]->cat_ID,
+              'post__not_in' => array( $featuredId )
+          )); ?>
 
-			echo '<div class="items"><div class="items-row">';
+        <?php if ( $the_query->have_posts() ) : ?>
 
-			$count = 0;
-			$newRow = false;
-			while ( have_posts() ) : the_post();
-				if ($newRow) {
-					echo '</div><div class="items-row">';
-				}
+        	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="section-row">
+              <?php get_template_part( 'card', 'horizontal' ); ?>
+            </div>
+        	<?php endwhile; ?>
 
-				$count++;
-				$newRow = $count % 3 == 0;
-				get_template_part( 'template-parts/post/content-card', get_post_format() );
+          <?php get_template_part( 'nav', 'below' ); ?>
 
-			endwhile;
+        	<?php wp_reset_postdata(); ?>
+        <?php endif; ?>
 
-			echo '</div></div>';
+      </div>
+    </div>
+  </div>
 
-			the_posts_pagination( array(
-				'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-			) );
+</div>
 
-		else :
-
-			get_template_part( 'template-parts/post/content', 'none' );
-
-		endif; ?>
-
-			<div class="entry-supplements entry-supplements__extra_margin">
-				<div class="entry-supplemental-section">
-					<!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com :: Campaign Title: Blog Newsletter Signup --><div id="om-hpogfvcg5knjlp7n-holder"></div><script>var hpogfvcg5knjlp7n,hpogfvcg5knjlp7n_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){hpogfvcg5knjlp7n_poll(function(){if(window['om_loaded']){if(!hpogfvcg5knjlp7n){hpogfvcg5knjlp7n=new OptinMonsterApp();return hpogfvcg5knjlp7n.init({"u":"20568.479597","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;hpogfvcg5knjlp7n=new OptinMonsterApp();hpogfvcg5knjlp7n.init({"u":"20568.479597","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
-				</div>
-			</div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
-
-<?php get_footer();
+<?php get_footer(); ?>

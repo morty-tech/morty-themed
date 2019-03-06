@@ -1,64 +1,154 @@
+<?php get_header(); ?>
+
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+  $the_query = new WP_Query(array(
+      'meta_key' => '_is_ns_featured_post',
+      'meta_value' => 'yes'
+  )); ?>
 
-get_header(); ?>
+<?php if ( $the_query->have_posts() ) : ?>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+    <ol class="carousel-indicators d-none d-md-flex">
+      <?php $count = $the_query->post_count;
+        for ($x = 0; $x < $count; $x++) { ?>
+          <li data-target="#carouselExampleIndicators"
+              data-slide-to="<?php echo $x ?>"
+              class="<?php if ( $x == 0 ) echo 'active'; ?>"></li>
+      <?php } ?>
+    </ol>
 
-<div class="wrap">
-	<!--  could potentially put list of categories here -->
+    <div class="carousel-inner">
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <div class="carousel-item <?php if ( $the_query->current_post == 0 ) echo 'active'; ?>">
+          <div class="carousel-image">
+            <img class="d-block w-100"
+              src="<?php the_post_thumbnail_url(); ?>"/>
+          </div>
+          <div class="carousel-caption">
+            <h2 class="caption"><a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?></a></h2>
+          </div>
+        </div>
+      <?php endwhile; ?>
+    </div>
 
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php endif; ?>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <?php wp_reset_postdata(); ?>
+<?php endif; ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container">
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('mortgage-101');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
+    <div class="section-row">
+      <div class="row">
+        <div class="col-md-8">
+          <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
+        </div>
 
-			<?php
-			if ( have_posts() ) :
+        <div class="col-md-4">
+          <?php get_template_part( 'addon', 'series' ); ?>
+        </div>
+      </div>
+    </div>
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
+  </div>
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content-card', get_post_format() );
+  <div class="section">
+    <div class="row">
+      <div class="col-md-8">
+        <?php get_template_part( 'addon', 'categories' ); ?>
+      </div>
+      <div class="col-md-4">
+        <?php get_template_part( 'addon', 'reads' ); ?>
+      </div>
+    </div>
+  </div>
 
-				endwhile;
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('money-matters');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
+    <div class="section-row">
+      <div class="row">
+        <div class="col-md-8">
+          <?php include( locate_template( 'category-featured.php', false, false ) ); ?>
+        </div>
 
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
+        <div class="col-md-4">
+          <?php get_template_part( 'addon', 'cta' ); ?>
+        </div>
+      </div>
+    </div>
 
-			else :
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
 
-				get_template_part( 'template-parts/post/content', 'none' );
+  </div>
 
-			endif;
-			?>
+  <div class="section">
+    <div class="row">
+      <div class="col-12">
+        <?php get_template_part( 'addon', 'newsletter' ); ?>
+      </div>
+    </div>
+  </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+  <div class="section">
+    <?php
+      $cat = get_category_by_slug('home-improvement');
+      $catId = $cat->cat_ID;
+    ?>
+    <div class="row">
+      <div class="col-12">
+        <?php include( locate_template( 'category-heading.php', false, false ) ); ?>
+      </div>
+    </div>
 
-<?php get_footer();
+    <div class="section-row">
+      <div class="row">
+        <div class="col-12">
+          <?php include( locate_template( 'category-deck.php', false, false ) ); ?>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<?php get_footer(); ?>

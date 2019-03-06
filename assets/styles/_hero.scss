@@ -1,0 +1,64 @@
+.carousel-item {
+  // height: 70vh;
+
+  .carousel-image {
+    height: 350px;
+
+    @include media-breakpoint-up(md) {
+      height: 70vh;
+    }
+
+    /* vertically centers the child image */
+    @extend .d-flex;
+    @extend .align-items-center;
+  }
+
+  img {
+    @include img-fluid;
+  }
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: 70vh;
+  }
+
+  /* vertically centers the child image */
+  @extend .d-flex;
+  @extend .align-items-center;
+
+  img {
+    width: 100%;
+    @include img-fluid;
+  }
+}
+
+.hero-heading {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: 10%;
+
+  /* horizontally centers the child heading block */
+  @extend .d-flex;
+  @extend .justify-content-center;
+}
+
+.carousel-caption {
+  bottom: 15%;
+}
+
+.hero-heading > .heading, .carousel-caption > .caption {
+  background: $white;
+  padding: 1rem;
+  color: $black;
+  line-height: 1.5;
+
+  p {
+    margin-bottom: 0;
+  }
+}

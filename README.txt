@@ -1,3 +1,3 @@
-=== Morty Wordpress Theme - based on Twenty Seventeen ===
+=== Morty Wordpress Theme  ===
 
 generate css w/ `gulp scss`
