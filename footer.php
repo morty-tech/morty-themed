@@ -19,10 +19,6 @@
             <img class="footer-logo" src="<?php echo get_parent_theme_file_uri('/assets/images/mortylogo-purple.png') ?>" alt="Morty" />
             <div>
               Morty is a licensed mortgage broker.
-              <address>
-              270 Lafayette St., Suite 1205 <br/>
-              New York, NY 10012
-              </address>
               NMLS ID # 1429243 <br />
               <a class="text-underline"
                 target="_blank" href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1429243">NMLS Consumer Access</a>
