@@ -28,10 +28,12 @@
                 target="_blank" href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1429243">NMLS Consumer Access</a>
             </div>
             <p>
-                Morty is not yet approved or licensed to originate loans in New York State.
-              </p>
+              Morty is not licensed to originate loans in New York State. 
+              No mortgage solicitation activity or loan applications for properties 
+              located in the State of New York can be facilitated through this website.
+            </p>
               <p>
-                &copy; 2017 Morty, Inc.
+                &copy; 2019 Morty, Inc.
             </p>
           </div>
 
