@@ -18,7 +18,7 @@
           <div class="col-lg-4 offset-lg-1 col-md-3">
             <img class="footer-logo" src="<?php echo get_parent_theme_file_uri('/assets/images/mortylogo-purple.png') ?>" alt="Morty" />
             <div>
-              Morty is a licensed mortgage broker.
+              Morty is a licensed mortgage broker.<br/>
               NMLS ID # 1429243 <br />
               <a class="text-underline"
                 target="_blank" href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1429243">NMLS Consumer Access</a>
