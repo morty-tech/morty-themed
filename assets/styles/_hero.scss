@@ -5,7 +5,7 @@
     height: 350px;
 
     @include media-breakpoint-up(md) {
-      height: 70vh;
+      height: 50vh;
     }
 
     /* vertically centers the child image */

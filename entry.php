@@ -28,15 +28,20 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-2 text-right">
+      <div class="col-1 text-right">
         <?php if ( is_singular() ) { get_template_part( 'entry-social' ); } ?>
       </div>
 
       <div class="col-10 col-lg-8">
         <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
       </div>
+
+      <div class="col-lg-3">
+        <?php get_sidebar(); ?>
+      </div>
     </div>
 
   <?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
   </div>
+
 </article>

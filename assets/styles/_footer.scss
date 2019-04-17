@@ -1,63 +1,89 @@
-$footerIconWidth: 20px;
+//Footer
+$footer-height: 340px;
+$footer-height-sm: 50px;
+$footer-spacing: 2rem;
 
 .footer {
+  height: $footer-height;
   text-align: center;
-  margin-bottom: 2rem;
+  color: $brand-purple;
 
   @include media-breakpoint-up(md) {
     text-align: left;
   }
-}
 
-.footer-logo {
-  max-width: 100px;
-  margin-bottom: .5rem;
+  a {
+    color: $brand-purple;
 
-  @include media-breakpoint-up(md) {
-    margin-bottom: 1.5rem;
+    &:hover {
+      color: $black;
+    }
   }
-}
 
-.footer-section {
-  h5 {
-    border-bottom: solid 1px;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+  h2 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-heavy;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-weight: 500;
+    padding-bottom: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    border-bottom: solid 1px rgba($brand-purple, 0.25);
 
     @include media-breakpoint-up(md) {
       margin-top: 0;
     }
   }
-}
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin-top: .5rem;
-}
+  hr.thick {
+    background-color: $black;
+    height: 6px;
+    margin: 20px auto 30px;
+    width: 80px;
 
-.footer-links-item {
-  margin-bottom: .25rem;
-
-  svg {
-    width: $footerIconWidth;
-    margin-top: -5px;
-    position: relative;
-    top: 5px;
-
-    .background {
-      fill: $white;
-    }
-
-    .icon-fill {
-      fill: $black;
+    @include media-breakpoint-up(md) {
+      margin: 20px 0 30px;
     }
   }
 
-  i {
-    font-size: $font-size-sm;
-    width: $footerIconWidth;
-    text-align: center;
+  .footer__links {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+      color: $brand-purple;
+      a {
+        color: $brand-blue;
+      }
+      i {
+        width: 20px;
+        margin-right: 5px;
+
+        &.fa-envelope {
+          font-size: $font-size-base;
+        }
+      }
+      + li {
+        margin-top: 0.3em;
+      }
+    }
   }
+
+  .footer__affiliate-logo {
+    max-width: 75px;
+    margin: 0 auto;
+
+    &.footer__affiliate-logo--wide {
+      max-width: 110px;
+    }
+
+    label {
+      font-size: $font-size-sm;
+    }
+  }
+
 }

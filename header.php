@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
     <?php if ( is_prod() ) : ?>
@@ -40,7 +41,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="d-flex" href="/">
-        <img class="navbar-brandimage align-self-center" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo2x.png') ?>" alt="Morty Blog" />
+        <img class="navbar-brandimage align-self-center" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" alt="Morty Blog" />
       </a>
     </div>
 
@@ -58,8 +59,8 @@
             </ul>
           </div>
           <div class="col-4 d-none d-lg-flex justify-content-center">
-            <a href="/">
-              <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo2x.png') ?>" alt="Morty Blog" />
+            <a href="https://www.himorty.com/blog">
+              <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" alt="Morty Blog" />
             </a>
           </div>
           <div class="col-4 col-lg-3 offset-lg-1 justify-content-end">

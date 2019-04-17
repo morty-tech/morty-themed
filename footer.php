@@ -15,65 +15,79 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 offset-lg-1 col-md-3">
-            <img class="footer-logo" src="<?php echo get_parent_theme_file_uri('/assets/images/mortylogo-purple.png') ?>" alt="Morty" />
-            <div>
-              Morty is a licensed mortgage broker.<br/>
-              NMLS ID # 1429243 <br />
-              <a class="text-underline"
-                target="_blank" href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1429243">NMLS Consumer Access</a>
+
+          <div class="col-md-4">
+            <div class="footer__logo mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 1716 560">
+                <g class="morty-logo-svg" fill="#473366"><path d="M508.44,225.74V433.87H406.75V234.55c0-33.89-16.27-55.58-48.81-55.58-33.9,0-52.87,23.72-52.87,63.72V433.87H203.37V234.55c0-33.89-16.27-55.58-48.81-55.58-33.9,0-52.88,23.72-52.88,63.72V433.87H0v-339H101.68v31.17c15.6-23,45.43-40.67,90.85-40.67,40,0,69.82,16.26,88.8,44.73,19-27.1,50.16-44.73,98.29-44.73C457.59,85.41,508.44,141,508.44,225.74Z"></path><path d="M520.61,264.38c0-101,80-179,179.64-179s179.66,78,179.66,179-80,179-179.66,179S520.61,365.38,520.61,264.38Zm257.61,0c0-48.13-33.9-80-78-80s-78,31.86-78,80,33.89,80,78,80S778.23,312.52,778.23,264.38Z"></path><path d="M1100.21,88.13V203.37c-42-6.78-101.69,10.17-101.69,77.29V433.87H896.84v-339H998.52v60.32C1012.09,109.82,1057.5,88.13,1100.21,88.13Z"></path><path d="M1273.06,192.52v120c0,29.14,25.09,31.85,69.83,29.14v92.2c-132.87,13.56-171.5-26.45-171.5-121.35v-120h-54.23V94.91h54.23V30.5L1273.06,0V94.91h69.83v97.61Z"></path><path d="M1715.73,94.91,1599.8,423.68c-38,107.8-98.29,150.5-193.21,145.76v-94.9c47.45,0,69.83-14.92,84.74-56.27L1356.42,94.91h111.87l75.23,207.43,63.73-207.43Z"></path></g>
+              </svg>
             </div>
-            <p>
-              Morty is not licensed to originate loans in New York State. 
-              No mortgage solicitation activity or loan applications for properties 
-              located in the State of New York can be facilitated through this website.
-            </p>
-              <p>
-                &copy; 2019 Morty, Inc.
-            </p>
+            <div>Morty is a licensed mortgage broker.<br>NMLS ID # 1429243 <br>
+              <a
+                class="text-underline"
+                target="_blank"
+                href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1429243">
+                  NMLS Consumer Access
+              </a>
+            </div>
+            <p>Morty is not licensed to originate loans in New York State. No mortgage solicitation activity or loan applications for properties located in the State of New York can be facilitated through this website.</p>
+            <p>© 2019 Morty, Inc.</p>
           </div>
 
-          <div class="col-lg-2 col-md-3">
-            <div class="footer-section">
-              <h5>Resources</h5>
-              <ul class="footer-links">
-                <li class="footer-links-item">
-                  <a href="https://blog.himorty.com/series/pre-approval">Pre-Approval Series</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://blog.himorty.com/all">All Posts</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/how-it-works">How Morty Works</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/onboarding">Get Started</a>
-                </li>
-              </ul>
-            </div>
+          <div class="col-md-3">
+            <h4>Company</h4>
+            <ul class="footer__links">
+              <li><a href="https://www.himorty.com/about">About Us</a></li>
+              <li><a href="https://www.himorty.com/how-it-works">How it Works</a></li>
+              <li><a href="https://www.himorty.com/faq">FAQ</a></li>
+              <li><a href="https://www.himorty.com/team">Jobs</a></li>
+              <li><a href="https://www.himorty.com/legal">Legal</a></li>
+              <li><a href="https://www.himorty.com/terms">Terms of Service</a></li>
+              <li><a href="https://www.himorty.com/privacy">Privacy Policy</a></li>
+            </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3">
-            <div class="footer-section">
-              <h5>Company</h5>
-              <ul class="footer-links">
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/">Morty Home</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/about">About Us</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/privacy">Privacy Policy</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="https://www.himorty.com/terms">Terms of Service</a>
-                </li>
-              </ul>
-            </div>
+          <div class="col-md-3">
+            <h4>Connect</h4>
+            <ul class="footer__links">
+              <li>
+                <a href="/blog"><i class="fa fa-rss"></i>Blog</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://twitter.com/HiMorty"><i class="fa fa-twitter-square"></i>Twitter</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/HiMorty/"><i class="fa fa-facebook-square"></i>Facebook</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/company/morty-inc."><i class="fa fa-linkedin-square"></i>LinkedIn</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/himortydotcom/"><i class="fa fa-instagram"></i>Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:hello@himorty.com"><i class="fa fa-envelope"></i>Email</a>
+              </li>
+              <li>
+                <a href="/contact"><i class="fa fa-comment"></i>Contact Us</a></li>
+            </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3">
+          <div class="col-md-2">
+            <ul class="footer__links mt-5 text-center">
+              <li>
+                <div class="footer__affiliate-logo">
+                  <img
+                    class="img-fluid"
+                    src="<?php echo get_parent_theme_file_uri('/assets/images/eoh.png') ?>"
+                    alt="Equal Housing Opportunity">
+                  <label class="text-center">Equal Housing Opportunity</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3" style="display:none">
             <div class="footer-section">
               <h5>Connect</h5>
               <ul class="footer-links">
