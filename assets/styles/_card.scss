@@ -148,7 +148,7 @@ $actionCardPadding: 1.75rem;
   }
 
   .action-card-inner, .banner-card-inner {
-    border: solid 5px;
+    border: solid 2px;
     padding: .5rem 1rem;
     height: auto;
 
@@ -164,52 +164,6 @@ $actionCardPadding: 1.75rem;
     padding: 1.25rem 0;
     font-size: $font-size-base;
     max-height: initial;
-
-    // ol {
-    // 	counter-reset:li; /* Initiate a counter */
-    // 	margin-left:0; /* Remove the default left margin */
-    // 	padding-left:0; /* Remove the default left padding */
-    //   margin-bottom: 0;
-    // }
-    // ol > li {
-    //   list-style:none; /* Disable the normal item numbering */
-    // 	position:relative; /* Create a positioning context */
-    //   margin-left: $actionCounterMargin;
-    //   margin-bottom: 1.5rem;
-    //   padding-left: .25rem;
-    //   line-height: 1.2;
-    //
-    //   @include media-breakpoint-up(md) {
-    //     margin-left: $actionCounterMarginLg;
-    //   }
-    //
-    //   &:last-child {
-    //     margin-bottom: 0;
-    //   }
-    // }
-
-    // ol > li:before {
-    // 	content:counter(li); /* Use the counter as content */
-    // 	counter-increment:li; /* Increment the counter by 1 */
-    // 	/* Position and style the number */
-    // 	position: absolute;
-    // 	top: 3px;
-    // 	left: -$actionCounterMargin;
-    // 	font-weight:$font-weight-xheavy;
-    // 	text-align:center;
-    //   font-size: $font-size-lg;
-    //   width: 25px;
-    //   height: 25px;
-    //   padding-top:3px;
-    //   background: $primary;
-    //   color: $white;
-    //
-    //   @include media-breakpoint-up(md) {
-    //     width: 30px;
-    //     height: 30px;
-    //     left: -$actionCounterMarginLg;
-    //   }
-    // }
   }
 }
 

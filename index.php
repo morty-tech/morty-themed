@@ -62,7 +62,7 @@
         </div>
 
         <div class="col-md-4">
-          <?php get_template_part( 'addon', 'series' ); ?>
+          <?php get_sidebar(); ?>
         </div>
       </div>
     </div>
@@ -149,6 +149,5 @@
   </div>
 
 </div>
-
 
 <?php get_footer(); ?>
