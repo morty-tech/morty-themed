@@ -50,6 +50,20 @@
         <div class="row">
           <div class="col-4">
             <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <?php
+                    $categories = get_categories();
+                    foreach($categories as $category) {
+                       echo '<a class="dropdown-item" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+                    }   
+                  ?>
+                </div>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="https://www.himorty.com/">Morty</a>
               </li>

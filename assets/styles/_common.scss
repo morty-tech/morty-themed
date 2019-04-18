@@ -12,6 +12,12 @@ html {
 .btn-light {
   background: $white;
   color: $primary;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+    border-color: $white;
+  }
 }
 
 @include media-breakpoint-down(sm) {

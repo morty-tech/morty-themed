@@ -194,6 +194,9 @@ $actionCardPadding: 1.75rem;
 
     &.btn-light {
       color: $primary;
+      &:hover {
+        color: $white;
+      }
     }
   }
 
