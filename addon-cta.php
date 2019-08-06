@@ -5,7 +5,7 @@
     <div class="card-body">
       <div class="text-center">
         <p>Complete your financial profile and then shop &amp; compare the best rates and products!</p>
-        <a href="https://www.himorty.com/onboarding" class="btn btn-light">Let's Go</a>
+        <a href="https://www.morty.com/onboarding" class="btn btn-light">Let's Go</a>
       </div>
     </div>
   </div>

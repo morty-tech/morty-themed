@@ -31,7 +31,7 @@ wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/index.js', ar
 // add_filter('the_content', 'wpmix_display_globals');
 
 function is_prod() {
-	$s = strpos(get_site_url(), 'himorty.com');
+	$s = strpos(get_site_url(), 'morty.com');
 	return !empty($s);
 }
 
