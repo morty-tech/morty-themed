@@ -59,21 +59,21 @@
                     $categories = get_categories();
                     foreach($categories as $category) {
                        echo '<a class="dropdown-item" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
-                    }   
+                    }
                   ?>
                 </div>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="https://www.himorty.com/">Morty</a>
+                <a class="nav-link" href="https://www.morty.com/">Morty</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://www.himorty.com/how-it-works">How It Works</a>
+                <a class="nav-link" href="https://www.morty.com/works">How It Works</a>
               </li>
             </ul>
           </div>
           <div class="col-4 d-none d-lg-flex justify-content-center">
-            <a href="https://www.himorty.com/blog">
+            <a href="https://www.morty.com/blog">
               <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" alt="Morty Blog" />
             </a>
           </div>
