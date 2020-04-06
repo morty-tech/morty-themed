@@ -68,7 +68,7 @@
                 <a href="mailto:hello@morty.com"><i class="fa fa-envelope"></i>Email</a>
               </li>
               <li>
-                <a href="/contact"><i class="fa fa-comment"></i>Contact Us</a></li>
+                <a href="https://www.morty.com/contact"><i class="fa fa-comment"></i>Contact Us</a></li>
             </ul>
           </div>
 
