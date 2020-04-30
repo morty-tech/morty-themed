@@ -10,7 +10,6 @@ same as featured with copy changes (i know...)
    <label class="feature-label">Latest</label>
 	</a>
   <div class="card-body">
-    <small class="text-muted"><?php echo get_the_date('F j, Y'); ?></small>
     <h5 class="card-title">
       <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h5>

@@ -72,7 +72,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-4 d-none d-lg-flex justify-content-center">
+          <div class="col-4 d-none d-lg-flex justify-content-center align-items-center">
             <a href="https://www.morty.com/blog">
               <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" alt="Morty Blog" />
             </a>

@@ -12,7 +12,9 @@ $iconWidth: 24px;
     bottom: 0;
     left: 0;
     opacity: 0;
-    transition: transform $inputTransition cubic-bezier(0.4, 0, 0.2, 1), opacity $inputTransition cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform $inputTransition cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $inputTransition cubic-bezier(0.4, 0, 0.2, 1),
+      opacity $inputTransition cubic-bezier(0.4, 0, 0.2, 1),
+      -webkit-transform $inputTransition cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: 50% center;
     z-index: 2;
   }
@@ -25,7 +27,8 @@ $iconWidth: 24px;
     padding-left: 5px;
     padding-right: 5px;
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
       outline: none;
       box-shadow: none;
 
@@ -41,7 +44,7 @@ $iconWidth: 24px;
     right: 0;
     top: 0;
     border: none;
-    background: $gray-100;
+    background: transparent;
     height: 36px;
 
     i {
@@ -51,7 +54,12 @@ $iconWidth: 24px;
     }
 
     &:hover {
-      background: $gray-200;
+      background: transparent;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
     }
   }
 }

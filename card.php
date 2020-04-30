@@ -7,7 +7,6 @@
    <?php endif; ?>
 	</a>
   <div class="card-body">
-		<small class="text-muted"><?php echo get_the_date('F j, Y'); ?></small>
     <h5 class="card-title pt-2">
       <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h5>
