@@ -57,7 +57,7 @@ $actionCounterMarginLg: 2.25rem;
 
   &:hover {
     .card-img-top {
-      opacity: .85;
+      opacity: 0.85;
     }
   }
 }
@@ -74,6 +74,8 @@ $actionCounterMarginLg: 2.25rem;
 }
 
 .card-title {
+  letter-spacing: 0.25px;
+
   @include media-breakpoint-up(md) {
     text-align: left;
   }
@@ -95,11 +97,12 @@ $actionCounterMarginLg: 2.25rem;
   }
 
   .feature-label {
-    background: $black;
+    background: $blue-1;
+    letter-spacing: 2px;
     color: $white;
     text-transform: uppercase;
     font-weight: $font-weight-xheavy;
-    padding: .25rem 2rem;
+    padding: 0.25rem 2rem;
     position: absolute;
     bottom: 10px;
     left: 20px;
@@ -107,15 +110,14 @@ $actionCounterMarginLg: 2.25rem;
 
   .card-body {
     @include media-breakpoint-up(md) {
-      max-height: $cardHeightLg - $cardImageHeightLg + 2*$font-size-base-px;
+      max-height: $cardHeightLg - $cardImageHeightLg + 2 * $font-size-base-px;
     }
   }
 }
 
-
-
 $actionCardPadding: 1.75rem;
-.action-card, .banner-card {
+.action-card,
+.banner-card {
   height: auto;
   padding: $actionCardPadding;
   position: relative;
@@ -126,7 +128,8 @@ $actionCardPadding: 1.75rem;
     height: $cardHeightLg;
   }
 
-  .action-card-title, .banner-title {
+  .action-card-title,
+  .banner-title {
     position: absolute;
     width: 100%;
     left: 0;
@@ -140,6 +143,7 @@ $actionCardPadding: 1.75rem;
     .title {
       display: inline;
       background: $gray-100;
+      letter-spacing: 1px;
       padding: 0 1.25rem;
       margin: 0;
       z-index: 1;
@@ -147,9 +151,10 @@ $actionCardPadding: 1.75rem;
     }
   }
 
-  .action-card-inner, .banner-card-inner {
-    border: solid 2px;
-    padding: .5rem 1rem;
+  .action-card-inner,
+  .banner-card-inner {
+    border: solid 1px;
+    padding: 0.5rem 1rem;
     height: auto;
 
     @extend .d-flex;
@@ -175,17 +180,21 @@ $actionCardPadding: 1.75rem;
   }
 }
 
-.action-card-dark, .banner-card-dark {
+.action-card-dark,
+.banner-card-dark,
+banner-card-blue {
   background: $primary;
   color: $white;
 
-  .action-card-title, .banner-title {
-    .title{
+  .action-card-title,
+  .banner-title {
+    .title {
       background: $primary;
     }
   }
 
-  .action-card-inner, .banner-card-inner {
+  .action-card-inner,
+  .banner-card-inner {
     color: $white;
   }
 
@@ -199,9 +208,24 @@ $actionCardPadding: 1.75rem;
       }
     }
   }
+}
 
-  .card-body {
+.banner-card-blue {
+  background: $brand-blue;
+  color: $white;
 
+  .action-card-title,
+  .banner-title {
+    .title {
+      background: $brand-blue;
+    }
+  }
+  a.btn-light {
+    color: $brand-blue;
+    &:hover {
+      background: $brand-blue;
+      color: $white;
+    }
   }
 }
 
@@ -217,7 +241,7 @@ $actionCardPadding: 1.75rem;
 
 .category-list-item {
   margin: 0;
-  padding: .65rem 0;
+  padding: 0.65rem 0;
 
   a {
     font-size: $font-size-base;
@@ -237,14 +261,14 @@ $actionCardPadding: 1.75rem;
       position: absolute;
       bottom: 0;
       left: 0;
-      line-height: .5;
+      line-height: 0.5;
     }
   }
 }
 
 .posts-list {
   list-style: none;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   margin: 0;
 
   li {
@@ -257,8 +281,8 @@ $actionCardPadding: 1.75rem;
     }
 
     + li {
-      margin-top: .85rem;
-      padding-top: .85rem;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
       border-top: dotted 1px;
     }
   }

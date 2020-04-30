@@ -7,36 +7,36 @@
     </div>
 
     <div class="post-header">
-      <div class="post-about">
-        <?php
-              $cats = get_the_category();
-              $cat = $cats[0];
-        ?>
-        <a href="<?php echo esc_url(get_category_link( $cat->cat_ID )); ?>"><?php echo $cat->cat_name; ?></a> on <?php the_date(); ?></div>
+      
         <h1 class="post-title"><?php the_title(); ?></h1>
         <?php
           $terms = get_the_terms( $post->ID, 'series' );
           if ( !empty( $terms ) ){
             $series = $terms[0];
           ?>
-          <div class="post-series ">
+          <div class="post-series">
             Part of our <a href="<?php echo esc_url(get_term_link($series)); ?>"><?php echo $series->name ?></a>
           </div>
-        <?php } ?>
+        <?php } else { ?>
+          <div class="post-about">
+        <?php
+              $cats = get_the_category();
+              $cat = $cats[0];
+        ?>
+        Part of <a href="<?php echo esc_url(get_category_link( $cat->cat_ID )); ?>"><?php echo $cat->cat_name; ?></a></div>
+        <?php }  ?>  
     </div>
   </header>
 
   <div class="container">
     <div class="row">
-      <div class="col-1 text-right">
+
+      <div class="col-10 col-lg-8 offset-lg-1">
+        <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
         <?php if ( is_singular() ) { get_template_part( 'entry-social' ); } ?>
       </div>
 
-      <div class="col-10 col-lg-8">
-        <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
-      </div>
-
-      <div class="col-lg-3">
+      <div class="col-2">
         <?php get_sidebar(); ?>
       </div>
     </div>

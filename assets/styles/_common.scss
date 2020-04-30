@@ -1,4 +1,3 @@
-
 html {
   font-size: $font-size-sm-px;
 }
@@ -12,6 +11,7 @@ html {
 .btn-light {
   background: $white;
   color: $primary;
+  border-radius: 4px;
 
   &:hover {
     background: $primary;
@@ -33,10 +33,10 @@ html {
 }
 
 .section {
-    margin: 1rem 0;
-    @include media-breakpoint-up(md) {
-      margin: 4rem 0;
-    }
+  margin: 1rem 0;
+  @include media-breakpoint-up(md) {
+    margin: 4rem 0;
+  }
 }
 
 .section-row + .section-row {
@@ -55,15 +55,16 @@ html {
 
   .nav-links {
     width: 100%;
-    text-align:center;
+    text-align: center;
   }
 
   .page-numbers {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 
-    &.prev, &.next {
+    &.prev,
+    &.next {
       background: $gray-100;
-      padding: .5rem;
+      padding: 0.5rem;
       margin: 0 1rem;
 
       &:hover {
@@ -78,27 +79,27 @@ html {
   }
 
   .pagination-arrow {
-    width: .75rem;
-    height: .75rem;
+    width: 0.75rem;
+    height: 0.75rem;
   }
 }
 
 //to handle how posts look around images
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

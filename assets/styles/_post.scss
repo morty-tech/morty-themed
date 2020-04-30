@@ -3,10 +3,6 @@
   margin: 2rem 0;
 }
 
-.post-about {
-  @extend .text-muted;
-}
-
 .post-title {
   margin: 2rem 0 1rem;
 }
@@ -23,8 +19,8 @@
   }
 }
 
-
-.post-series {
+.post-series,
+.post-about {
   font-size: $font-size-lg;
   font-style: italic;
   margin-bottom: 1rem;
@@ -37,35 +33,25 @@
 .social-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  margin: 2rem 0 0;
 }
 
 .social-list-item {
-  margin-bottom: 1rem;
+  margin-right: 1rem;
 
   a {
     svg {
       width: 2.25rem;
 
       .background {
-        transition: fill .25s ease;
+        transition: fill 0.25s ease;
         fill: $white;
       }
 
       .icon-fill {
-        transition: fill .25s ease;
+        transition: fill 0.25s ease;
         fill: $primary;
-      }
-    }
-
-    &:hover {
-      svg {
-        .background {
-          fill: $primary;
-        }
-
-        .icon-fill {
-          fill: $white;
-        }
       }
     }
   }

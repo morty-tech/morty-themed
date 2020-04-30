@@ -3,15 +3,16 @@ $brand-cream: #f7f2eb;
 $brand-green: #2ac794;
 $brand-purple: #473366;
 $brand-blue: #4b88e6;
-$black: #000000;
+$black: #212121;
 $white: #ffffff;
 $gray: #818181;
 $gray-alpha-50: rgba($gray, 0.5);
+$blue-1: #3c6cb8;
 
 $primary: $brand-purple;
 $body-color: $black;
 
-$primary-alpha-1: rgba($primary, .1);
+$primary-alpha-1: rgba($primary, 0.1);
 $primary-light: #ecebef;
 
 $font-family-sans-serif: gilroy, "Helvetica Neue", sans-serif !default;
@@ -22,10 +23,10 @@ $font-size-base-px: 16px;
 
 $display4-size: 2.5rem;
 
-$navbar-light-color:                rgba($black,.7);
-$navbar-light-hover-color:          $black;
-$navbar-light-toggler-border-color: rgba($black,.7);
-$nav-link-padding-x:                2rem;
+$navbar-light-color: rgba($black, 0.7);
+$navbar-light-hover-color: $black;
+$navbar-light-toggler-border-color: rgba($black, 0.7);
+$nav-link-padding-x: 2rem;
 
 $border-radius: 1px;
 $border-radius-lg: 1px;
@@ -43,8 +44,8 @@ $font-weight-xheavy: 800;
 $carousel-control-color: $black;
 $carousel-indicator-active-bg: $black;
 
-$carousel-control-opacity: .75;
+$carousel-control-opacity: 0.75;
 $carousel-control-icon-width: 40px;
 
-$carousel-control-prev-icon-bg: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.9 88.2" style="enable-background:new 0 0 51.9 88.2;" xml:space="preserve"><g><path d="M5,44.1L44.2,4.9L47,7.7L10.7,44.1L47,80.4l-2.8,2.8L5,44.1z M44.2,4.9L47,7.7"/><polygon points="44.2,0 51.9,7.7 15.6,44.1 51.9,80.4 44.2,88.2 0,44.2 	"/></g></svg>');
-$carousel-control-next-icon-bg: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.903 88.196" style="enable-background:new 0 0 51.903 88.196;" xml:space="preserve"><g><path d="M46.95,44.047l-39.2,39.2l-2.8-2.8l36.3-36.4l-36.3-36.3l2.8-2.8L46.95,44.047z M7.75,83.247l-2.8-2.8"></path><polygon points="7.75,88.196 0.003,80.451 36.303,44.05 0,7.747 7.747,0 51.903,44.044"></polygon></g></svg>');
+$carousel-control-prev-icon-bg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="20px" height="20px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>');
+$carousel-control-next-icon-bg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="20px" height="20px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>');

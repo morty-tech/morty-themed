@@ -12,7 +12,6 @@
 			<h5 class="card-title">
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h5>
-			<small class="text-muted"><?php echo get_the_date('F j, Y'); ?></small>
 			<p class="card-intro d-none d-md-block">
 				<?php echo strip_tags(get_the_excerpt()); ?>
 			</p>
