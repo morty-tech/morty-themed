@@ -20,7 +20,8 @@ $inputTransition: 200ms;
   }
 }
 
-.navbar-collapse.show {
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
   .container-fluid {
     padding-left: 0;
   }
