@@ -31,12 +31,12 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-10 col-lg-8 offset-lg-1">
+      <div class="col-xs-12 col-md-8 offset-lg-1">
         <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
         <?php if ( is_singular() ) { get_template_part( 'entry-social' ); } ?>
       </div>
 
-      <div class="col-2">
+      <div class="col-xs-12 col-md-4 col-lg-3">
         <?php get_sidebar(); ?>
       </div>
     </div>
