@@ -48,7 +48,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
+          <div class="col-xs-12 col-md-4">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,7 +77,7 @@
               <img class="navbar-brandimage" src="<?php echo get_parent_theme_file_uri('/assets/images/bloglogo.png') ?>" alt="Morty Blog" />
             </a>
           </div>
-          <div class="col-4 col-lg-3 offset-lg-1 justify-content-end">
+          <div class="col-xs-10 col-lg-3 offset-lg-1 justify-content-end">
             <?php get_search_form(); ?>
           </div>
         </div>
